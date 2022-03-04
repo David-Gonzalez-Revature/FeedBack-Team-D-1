@@ -96,22 +96,22 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="signup"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-NY-KmF">
-                                <rect key="frame" x="153" y="523" width="176" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="twitter_logo" title=""/>
-                                <connections>
-                                    <action selector="goToTwitter:" destination="ayR-2o-mb1" eventType="touchUpInside" id="Gvl-Bg-36j"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGE-bG-851">
-                                <rect key="frame" x="44" y="546" width="158" height="99"/>
+                                <rect key="frame" x="169" y="451" width="37" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="facebook_logo" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" image="output-onlinepngtools" title=""/>
                                 <connections>
                                     <action selector="goToFacebook:" destination="ayR-2o-mb1" eventType="touchUpInside" id="ayb-xi-OLa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-NY-KmF">
+                                <rect key="frame" x="228" y="451" width="34" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="output-onlinepngtools (1)" title=""/>
+                                <connections>
+                                    <action selector="goToTwitter:" destination="ayR-2o-mb1" eventType="touchUpInside" id="Gvl-Bg-36j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,8 +132,8 @@
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="cityscape" width="353.5" height="600"/>
-        <image name="facebook_logo" width="640" height="360"/>
-        <image name="twitter_logo" width="640" height="360"/>
+        <image name="output-onlinepngtools" width="36" height="36"/>
+        <image name="output-onlinepngtools (1)" width="37" height="36"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
