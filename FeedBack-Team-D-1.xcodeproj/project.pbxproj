@@ -13,8 +13,6 @@
 		2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC5127CE8BB00068D55C /* CoreDataManage.swift */; };
 		22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */; };
 		22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */; };
-		22D0F2C727CCF6E400E2C985 /* TnksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */; };
-		22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */; };
 		22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFD9927C93C160013605E /* AppDelegate.swift */; };
 		22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFD9B27C93C160013605E /* SceneDelegate.swift */; };
 		22DCFD9E27C93C160013605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFD9D27C93C160013605E /* ViewController.swift */; };
@@ -27,6 +25,8 @@
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
+		2DA968EB27D1E004006AA54A /* LaunchScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA968EA27D1E004006AA54A /* LaunchScreenStoryboard.storyboard */; };
+		2DA968EF27D1E08C006AA54A /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA968EE27D1E08C006AA54A /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,6 @@
 		2285CC5127CE8BB00068D55C /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
-		22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TnksStoryboard.storyboard; sourceTree = "<group>"; };
-		22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TnksViewController.swift; sourceTree = "<group>"; };
 		22DCFD9627C93C160013605E /* FeedBack-Team-D-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FeedBack-Team-D-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DCFD9927C93C160013605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22DCFD9B27C93C160013605E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +50,8 @@
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DA968EA27D1E004006AA54A /* LaunchScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		2DA968EE27D1E08C006AA54A /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +86,9 @@
 		2285CC4927CE698B0068D55C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2DA968EA27D1E004006AA54A /* LaunchScreenStoryboard.storyboard */,
 				22DCFD9F27C93C160013605E /* Main.storyboard */,
 				22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */,
-				22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */,
 				22DCFDB427C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard */,
 				2285CC4B27CE6ADA0068D55C /* WellcomeStoryboard.storyboard */,
 				2D863E4327D073AD00D8FCCE /* HomePage.storyboard */,
@@ -100,12 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				22DCFD9D27C93C160013605E /* ViewController.swift */,
-				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				22DCFDB027C9482A0013605E /* HomeViewController.swift */,
 				22F4B5A127CCE9F9004284AB /* StartViewController.swift */,
 				22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
 				2D863E4527D0783B00D8FCCE /* LoginViewController.swift */,
+				2DA968EE27D1E08C006AA54A /* LaunchScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA968EB27D1E004006AA54A /* LaunchScreenStoryboard.storyboard in Resources */,
 				2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */,
 				22DCFDA927C93C180013605E /* LaunchScreen.storyboard in Resources */,
-				22D0F2C727CCF6E400E2C985 /* TnksStoryboard.storyboard in Resources */,
 				2285CC4C27CE6ADA0068D55C /* WellcomeStoryboard.storyboard in Resources */,
 				22DCFDB527C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard in Resources */,
 				22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */,
@@ -218,10 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */,
+				2DA968EF27D1E08C006AA54A /* LaunchScreenViewController.swift in Sources */,
 				22DCFDB127C9482A0013605E /* HomeViewController.swift in Sources */,
 				2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */,
 				22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */,
-				22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */,
 				22DCFDA427C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld in Sources */,
 				22DCFD9E27C93C160013605E /* ViewController.swift in Sources */,
 				2285CC4F27CE6BB10068D55C /* User+CoreDataClass.swift in Sources */,
