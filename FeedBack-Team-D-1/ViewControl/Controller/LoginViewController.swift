@@ -12,9 +12,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var id: UITextField!
     @IBOutlet weak var pass: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if((id.text?.count)! >= 50){
+            print("50+")
+        }
     }
     
     //to do : add exception handling for no identifier info input

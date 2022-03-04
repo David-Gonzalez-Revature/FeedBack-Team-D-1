@@ -120,6 +120,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zrh-9W-cK8"/>
                     <connections>
+                        <outlet property="id" destination="raD-Jz-zao" id="Psj-nT-hth"/>
                         <outlet property="pass" destination="rgt-vN-JJ2" id="c4r-Cy-Xvm"/>
                         <outlet property="username" destination="raD-Jz-zao" id="d9X-CR-Ec2"/>
                     </connections>
