@@ -29,7 +29,7 @@
                                     <segue destination="xH3-UW-IZu" kind="presentation" modalPresentationStyle="fullScreen" id="7BJ-2j-TPC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="WfN-lN-d9r">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="WfN-lN-d9r">
                                 <rect key="frame" x="227" y="507" width="167" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -56,7 +56,7 @@
                                 <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="star" catalog="system" title="100%">
-                                    <color key="baseBackgroundColor" red="0.65008622410000005" green="0.80628520250000002" blue="0.22201961279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.65008622407913208" green="0.80628520250320435" blue="0.22201961278915405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="S5_Happy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bi5-E6-VJA"/>
@@ -170,7 +170,7 @@ Thanks ,</string>
         </scene>
     </scenes>
     <resources>
-        <image name="happy" width="1386" height="1008"/>
+        <image name="Happy" width="1386" height="1008"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="logoCityEscapeF" width="452" height="253"/>
         <image name="sadIcon" width="300" height="300"/>
