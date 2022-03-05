@@ -21,7 +21,7 @@ extension String {
 var iconClick = false
 let imageIcon = UIImageView()
 
-class ViewController: UIViewController {
+class SignUp: UIViewController {
     
     
     // MARK: - Outlets
