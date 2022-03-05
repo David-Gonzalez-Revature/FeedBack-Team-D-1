@@ -196,7 +196,7 @@ class ViewController: UIViewController {
     
     // MARK: - Prepare Send Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let svc = segue.destination as!  HomeViewController
+        let svc = segue.destination as!  WellcomeViewController
         print("******:Id is :", userEmailText.text!, " Passs is:" )
         
         svc.userEmail_Home = userEmailText.text!

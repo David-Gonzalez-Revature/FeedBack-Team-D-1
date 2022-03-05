@@ -2,7 +2,7 @@
 //  UserScore+CoreDataProperties.swift
 //  FeedBack-Team-D-1
 //
-//  Created by David Gonzalez on 3/3/22.
+//  Created by David Gonzalez on 3/5/22.
 //
 //
 
@@ -19,6 +19,7 @@ extension UserScore {
     @NSManaged public var dateCreated: Date?
     @NSManaged public var email: String?
     @NSManaged public var score: Int32
+    @NSManaged public var userScoreGifts: UserScoreGifts?
 
 }
 

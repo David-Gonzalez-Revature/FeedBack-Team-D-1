@@ -61,7 +61,6 @@ class TnksViewController: UIViewController {
         PlayAudio( sound: soundNameHappy)
         addDataUserScore(p : 100)
         getDataUserScore()
-     //   getOneDataUser()
         getOneDataUserScore( p : emailG)
     }
     
