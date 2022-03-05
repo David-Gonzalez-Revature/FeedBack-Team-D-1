@@ -13,8 +13,8 @@
 		226327D327D384C80078BF5B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327CB27D384C80078BF5B /* User+CoreDataProperties.swift */; };
 		226327D427D384C80078BF5B /* UserScore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327CC27D384C80078BF5B /* UserScore+CoreDataClass.swift */; };
 		226327D527D384C80078BF5B /* UserScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327CD27D384C80078BF5B /* UserScore+CoreDataProperties.swift */; };
-		226327D627D384C80078BF5B /* UserScoreGifts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327CE27D384C80078BF5B /* UserScoreGifts+CoreDataClass.swift */; };
-		226327D727D384C80078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327CF27D384C80078BF5B /* UserScoreGifts+CoreDataProperties.swift */; };
+		226327DA27D398910078BF5B /* UserScoreGifts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327D827D398910078BF5B /* UserScoreGifts+CoreDataClass.swift */; };
+		226327DB27D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226327D927D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift */; };
 		2285CC4C27CE6ADA0068D55C /* WellcomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2285CC4B27CE6ADA0068D55C /* WellcomeStoryboard.storyboard */; };
 		2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC5127CE8BB00068D55C /* CoreDataManage.swift */; };
 		22A8971727D1A062009AC391 /* happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A8971527D1A061009AC391 /* happy.mp3 */; };
@@ -44,8 +44,8 @@
 		226327CB27D384C80078BF5B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		226327CC27D384C80078BF5B /* UserScore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserScore+CoreDataClass.swift"; path = "../../UserScore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		226327CD27D384C80078BF5B /* UserScore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserScore+CoreDataProperties.swift"; path = "../../UserScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		226327CE27D384C80078BF5B /* UserScoreGifts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserScoreGifts+CoreDataClass.swift"; sourceTree = "<group>"; };
-		226327CF27D384C80078BF5B /* UserScoreGifts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserScoreGifts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		226327D827D398910078BF5B /* UserScoreGifts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserScoreGifts+CoreDataClass.swift"; path = "../../UserScoreGifts+CoreDataClass.swift"; sourceTree = "<group>"; };
+		226327D927D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserScoreGifts+CoreDataProperties.swift"; path = "../../UserScoreGifts+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2285CC4B27CE6ADA0068D55C /* WellcomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WellcomeStoryboard.storyboard; sourceTree = "<group>"; };
 		2285CC5127CE8BB00068D55C /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		22A8971527D1A061009AC391 /* happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happy.mp3; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 				226327CA27D384C80078BF5B /* User+CoreDataClass.swift */,
 				226327CB27D384C80078BF5B /* User+CoreDataProperties.swift */,
 				226327CC27D384C80078BF5B /* UserScore+CoreDataClass.swift */,
+				226327D827D398910078BF5B /* UserScoreGifts+CoreDataClass.swift */,
+				226327D927D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift */,
 				226327CD27D384C80078BF5B /* UserScore+CoreDataProperties.swift */,
-				226327CE27D384C80078BF5B /* UserScoreGifts+CoreDataClass.swift */,
-				226327CF27D384C80078BF5B /* UserScoreGifts+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,13 +261,13 @@
 				22DCFDA427C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld in Sources */,
 				22DCFD9E27C93C160013605E /* ViewController.swift in Sources */,
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
+				226327DA27D398910078BF5B /* UserScoreGifts+CoreDataClass.swift in Sources */,
 				226327D327D384C80078BF5B /* User+CoreDataProperties.swift in Sources */,
-				226327D727D384C80078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */,
+				226327DB27D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */,
 				226327D027D384C80078BF5B /* UserSurveyServices+CoreDataClass.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
 				226327D427D384C80078BF5B /* UserScore+CoreDataClass.swift in Sources */,
 				22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */,
-				226327D627D384C80078BF5B /* UserScoreGifts+CoreDataClass.swift in Sources */,
 				226327D527D384C80078BF5B /* UserScore+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
