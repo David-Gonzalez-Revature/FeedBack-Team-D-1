@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class WellcomeViewController: UIViewController {
     @IBOutlet weak var userEmail: UILabel!
     
     
