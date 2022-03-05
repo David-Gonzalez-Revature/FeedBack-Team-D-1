@@ -15,7 +15,7 @@ class WellcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
         if text != nil {
             userEmail.text = text
         }
@@ -31,11 +31,10 @@ class WellcomeViewController: UIViewController {
     var userEmail_Home = ""
     var text : String?
     
-    @IBOutlet weak var goToServiceButton: UIButton!
     // MARK: - FUNCTIONS
-    private func setupUI() {
-        goToServiceButton.layer.cornerRadius = 20
-    }
+//    private func setupUI() {
+//        goToServiceButton.layer.cornerRadius = 20
+//    }
    
     func ViewData() {
          // Set query
