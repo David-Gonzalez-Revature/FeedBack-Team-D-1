@@ -9,56 +9,57 @@ import UIKit
 
 class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    // MARK: - IB
     @IBOutlet weak var goodR: UILabel!
-    
     @IBOutlet weak var badR: UILabel!
-    var gifts    = ["hotel", "food", "amazone"]
-  
+    @IBOutlet weak var qrImage: UIImageView!
+    @IBOutlet weak var giftSelect: UILabel!
+    @IBOutlet weak var endMesagge: UILabel!
+    @IBOutlet weak var selectButton: UIButton!
+    
+    
+    var gifts    = ["Hotel", "Food", "Amazone","Gas"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    // MARK: - rows values
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let giftsCell = tableView.dequeueReusableCell(withIdentifier: "giftsCell") as! GiftUITableViewController
-        
-        // MARK: - rows values
-        // ******************************** Rows  Values             ********************************
-        
-        print("acaaaaaaa")
         getDataUserScore()
-        print(indexPath.section )
+        print("1.- --------------------- Rows  Values  ",indexPath.section)
         switch indexPath.section {
-
         case 0: // General section 1
-            
             giftsCell.descGift.text = gifts[indexPath.row]
-            giftsCell.gitImg
             giftsCell.gitImg.image =  UIImage(named: gifts[indexPath.row])
-//            cell1.item1.text = gifts[indexPath.row]
-//            cell1.item2.image = UIImage(named: imgData[indexPath.row])
             return giftsCell
-
         default:
             return giftsCell
         }
-      
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return gifts.count
     }
-
+    
     func getDataUserScore() {
-        var data = CoreDataManage.inst.getDataUserScore() //.getData()
+        let data = CoreDataManage.inst.getDataUserScore() //.getData()
         var good = 0
         var bad  = 0
-        var  numRatingTotal  = CoreDataManage.inst.getDataUserScore().count
+        let  numRatingTotal  = CoreDataManage.inst.getDataUserScore().count
         for d in data{
             if d.score == 100{
-                var numRating = CoreDataManage.inst.getDataUserScore().count
+               // var numRating = CoreDataManage.inst.getDataUserScore().count
                 good += 1
             }else{
-                var numRating = CoreDataManage.inst.getDataUserScore().count
+             //   var numRating = CoreDataManage.inst.getDataUserScore().count
                 bad += 1
             }
-            print("Email is ","davisgon@gmail.com","Score ", d.score, "DateCreated USER SCORE ",d.dateCreated)
+           // print("Email is ","davisgon@gmail.com","Score ", d.score, "DateCreated USER SCORE ",d.dateCreated)
         }
         print(numRatingTotal, "Total Bad:",bad," Total Good: ",good)
         goodR.text = String(good)
@@ -67,15 +68,25 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: - SELECTED CELL & RANDOM
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        giftSelect.isHidden = false
+        qrImage.isHidden = false
+        selectButton.isEnabled = true
+        let random = randomString(length: 8)
+        giftSelect.text = "Your coupon:   " + gifts[indexPath.row]+"-"+random
+        //  print("Gift Selected*  11111" ,indexPath.row ,gifts[indexPath.row] )
     }
     
-    // MARK: - Navigation
+    // Generating Random String
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
     
-
+    
+    @IBAction func itemSelected(_ sender: Any) {
+        endMesagge.isHidden = false
+    }
+    
 }
