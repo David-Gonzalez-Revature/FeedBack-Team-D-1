@@ -104,7 +104,7 @@ class TnksViewController: UIViewController {
         //getOneDataUserScore()
         getDataUserScore()
     }
-    
+  //  var userEmail_Home = ""
     func getOneDataUser() {
         let pMail = "userEmailText.text!"
         let d =  CoreDataManage.inst.getOneDataUser(n: "davisgon@gmail.com")

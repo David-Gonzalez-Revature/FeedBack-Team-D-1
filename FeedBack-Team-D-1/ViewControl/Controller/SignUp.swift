@@ -30,6 +30,12 @@ class SignUp: UIViewController {
     @IBOutlet weak var error: UILabel!
     @IBOutlet weak var userPasswordText: UITextField!
     
+    
+    @IBOutlet weak var hidePas: UIButton!
+    @IBOutlet weak var showP: UIButton!
+    
+    
+    
     // MARK: - IBActions
     @IBOutlet weak var submitButton: UIButton!
     // MARK: - STUP SUBMIT BUTTON
@@ -45,9 +51,33 @@ class SignUp: UIViewController {
         super.viewDidLoad()
         print("Inicio Register")
         setupUI()
-        ShowPassword()
-       
+    //    ShowPassword()
+        userPasswordText.isSecureTextEntry = true
     }
+    
+    
+    @IBAction func showPass(_ sender: Any) {
+       
+        print("Change passs")
+        userPasswordText.isSecureTextEntry = false
+        
+        hidePas.isHidden = false
+        showP.isHidden = true
+      
+        
+        
+    }
+    
+    @IBAction func hidePass(_ sender: Any) {
+        print("Hide Change passs")
+        userPasswordText.isSecureTextEntry = true
+        hidePas.isHidden = true
+        showP.isHidden = false
+    
+    }
+    
+    
+    
     
     func ShowPassword() {
         // ***************************** Passs *******************************
