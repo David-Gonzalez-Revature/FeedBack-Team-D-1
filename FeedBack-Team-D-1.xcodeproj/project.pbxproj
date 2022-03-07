@@ -37,11 +37,8 @@
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
-
-		908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */; };
-
 		2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */; };
-
+		908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,11 +74,8 @@
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-
-		908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
-
 		2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenAnimationViewController.swift; sourceTree = "<group>"; };
-
+		908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +143,7 @@
 				22CEC9BA27D42060002AB800 /* GiftUITableViewController.swift */,
 				22DCFD9D27C93C160013605E /* SignUp.swift */,
 				22DCFDB027C9482A0013605E /* WellcomeViewController.swift */,
+				908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */,
 				22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */,
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
@@ -194,7 +189,6 @@
 				22CEC9BC27D44B5C002AB800 /* Assets.xcassets */,
 				22DCFDAA27C93C180013605E /* Info.plist */,
 				22DCFDA227C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld */,
-				908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */,
 			);
 			path = "FeedBack-Team-D-1";
 			sourceTree = "<group>";
@@ -447,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JQ76ZARXB3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,7 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JQ76ZARXB3;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
