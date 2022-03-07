@@ -27,6 +27,7 @@
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
+		2DEAAEDE27D5C0D70015E9EA /* SplashscreenLogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDD27D5C0D70015E9EA /* SplashscreenLogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DEAAEDD27D5C0D70015E9EA /* SplashscreenLogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenLogoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		2285CC4A27CE69980068D55C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2DEAAEDD27D5C0D70015E9EA /* SplashscreenLogoViewController.swift */,
 				22DCFD9D27C93C160013605E /* ViewController.swift */,
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				22DCFDB027C9482A0013605E /* HomeViewController.swift */,
@@ -228,6 +231,7 @@
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
 				2285CC5027CE6BB10068D55C /* User+CoreDataProperties.swift in Sources */,
+				2DEAAEDE27D5C0D70015E9EA /* SplashscreenLogoViewController.swift in Sources */,
 				22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
