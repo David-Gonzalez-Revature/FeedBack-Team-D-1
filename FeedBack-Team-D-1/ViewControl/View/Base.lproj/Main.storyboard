@@ -344,12 +344,20 @@
                                     <action selector="submitButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRU-HG-WtN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOU-RN-smg">
+                                <rect key="frame" x="54" y="200" width="265" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7kX-sJ-MuK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="image" destination="U5X-Yd-bLR" id="usf-pp-ppc"/>
+                        <outlet property="label" destination="LOU-RN-smg" id="5UL-RP-M08"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-cQ-ch7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -359,7 +367,7 @@
         <!--Start View Controller-->
         <scene sceneID="iXT-yn-09k">
             <objects>
-                <viewController id="WoB-y6-UVH" customClass="StartViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startView" id="WoB-y6-UVH" customClass="StartViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FAU-EK-Df9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
