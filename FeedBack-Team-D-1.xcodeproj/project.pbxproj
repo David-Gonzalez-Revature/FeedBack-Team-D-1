@@ -37,6 +37,7 @@
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
+		908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */; };
 		2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
 		2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenAnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				22CEC9BC27D44B5C002AB800 /* Assets.xcassets */,
 				22DCFDAA27C93C180013605E /* Info.plist */,
 				22DCFDA227C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld */,
+				908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */,
 			);
 			path = "FeedBack-Team-D-1";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				22DCFDB127C9482A0013605E /* WellcomeViewController.swift in Sources */,
 				226327D127D384C80078BF5B /* UserSurveyServices+CoreDataProperties.swift in Sources */,
 				226327D227D384C80078BF5B /* User+CoreDataClass.swift in Sources */,
+				908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */,
 				2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */,
 				22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */,
 				22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */,
@@ -437,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SC7ZANG49L;
+				DEVELOPMENT_TEAM = JQ76ZARXB3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,7 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SC7ZANG49L;
+				DEVELOPMENT_TEAM = JQ76ZARXB3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
