@@ -12,7 +12,7 @@
         <!--Tnks View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TnksViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="TnksViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,8 +68,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Gifts">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
-                                    <color key="baseForegroundColor" red="0.98414963483810425" green="0.79190868139266968" blue="0.036851599812507629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.65008622407913208" green="0.80628520250320435" blue="0.22201961278915405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.98414963479999995" green="0.79190868140000004" blue="0.036851599810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="recuperaData:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0mP-Zy-YbE"/>
@@ -254,8 +254,8 @@ Thanks ,</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SELECT">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
-                                    <color key="baseForegroundColor" red="0.98414963479999995" green="0.79190868140000004" blue="0.036851599810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.65008622410000005" green="0.80628520250000002" blue="0.22201961279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.98414963479999995" green="0.79190868140000004" blue="0.036851599810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="itemSelected:" destination="isX-tt-s4D" eventType="touchUpInside" id="df5-ju-T2E"/>
@@ -333,7 +333,7 @@ Thanks ,</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JHU-ks-C6j"/>
+        <segue reference="7BJ-2j-TPC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="happy" width="1386" height="1008"/>
