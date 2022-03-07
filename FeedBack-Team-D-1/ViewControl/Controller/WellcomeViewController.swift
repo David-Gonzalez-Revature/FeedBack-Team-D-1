@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class WellcomeViewController: UIViewController {
     @IBOutlet weak var userEmail: UILabel!
     
     
@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
         if text != nil {
             userEmail.text = text
         }
@@ -31,10 +31,11 @@ class HomeViewController: UIViewController {
     var userEmail_Home = ""
     var text : String?
     
+    @IBOutlet weak var goToServiceButton: UIButton!
     // MARK: - FUNCTIONS
-//    private func setupUI() {
-//        goToServiceButton.layer.cornerRadius = 20
-//    }
+    private func setupUI() {
+        goToServiceButton.layer.cornerRadius = 20
+    }
    
     func ViewData() {
          // Set query
@@ -61,6 +62,31 @@ class HomeViewController: UIViewController {
          
          print("View Data")
      }
+    
+    
+    // MARK: - Prepare Send Data
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let svc = segue.destination as!  GiftsViewController
+     
+        
+     //   svc.userEmail_Home = userEmail.text!
+   // }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Funciona11111111")
+        
+//        let svc = segue.destination as!  TnksViewController
+//        
+//        
+//           if segue.identifier == "tnks-segue" {
+//             
+//               if let destinationViewController = segue.destination as? TnksViewController {
+//                   
+//                   print("Funciona")
+//                  // destinationViewController.showAlert = acceptedRide
+//               }
+//           }
+       }
    
 
 }

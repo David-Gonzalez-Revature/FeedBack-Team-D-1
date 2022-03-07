@@ -21,7 +21,7 @@ extension String {
 var iconClick = false
 let imageIcon = UIImageView()
 
-class ViewController: UIViewController {
+class SignUp: UIViewController {
     
     
     // MARK: - Outlets
@@ -29,6 +29,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var error: UILabel!
     @IBOutlet weak var userPasswordText: UITextField!
+    
+    
+    @IBOutlet weak var hidePas: UIButton!
+    @IBOutlet weak var showP: UIButton!
+    
+    
     
     // MARK: - IBActions
     @IBOutlet weak var submitButton: UIButton!
@@ -45,9 +51,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("Inicio Register")
         setupUI()
-        ShowPassword()
-       
+    //    ShowPassword()
+        userPasswordText.isSecureTextEntry = true
     }
+    
+    
+    @IBAction func showPass(_ sender: Any) {
+       
+        print("Change passs")
+        userPasswordText.isSecureTextEntry = false
+        
+        hidePas.isHidden = false
+        showP.isHidden = true
+      
+        
+        
+    }
+    
+    @IBAction func hidePass(_ sender: Any) {
+        print("Hide Change passs")
+        userPasswordText.isSecureTextEntry = true
+        hidePas.isHidden = true
+        showP.isHidden = false
+    
+    }
+    
+    
+    
     
     func ShowPassword() {
         // ***************************** Passs *******************************
@@ -196,7 +226,7 @@ class ViewController: UIViewController {
     
     // MARK: - Prepare Send Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let svc = segue.destination as!  HomeViewController
+        let svc = segue.destination as!  WellcomeViewController
         print("******:Id is :", userEmailText.text!, " Passs is:" )
         
         svc.userEmail_Home = userEmailText.text!
