@@ -12,7 +12,6 @@
 		2285CC5027CE6BB10068D55C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */; };
 		2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285CC5127CE8BB00068D55C /* CoreDataManage.swift */; };
 		22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */; };
-		22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */; };
 		22D0F2C727CCF6E400E2C985 /* TnksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */; };
 		22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */; };
 		22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFD9927C93C160013605E /* AppDelegate.swift */; };
@@ -27,6 +26,8 @@
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
+		909C9C3B27D354E300665F9E /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C9C3A27D354E300665F9E /* SurveyTableViewCell.swift */; };
+		909C9C3D27D3568E00665F9E /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C9C3C27D3568E00665F9E /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,6 @@
 		2285CC4E27CE6BB10068D55C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2285CC5127CE8BB00068D55C /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
-		22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		22D0F2C627CCF6E400E2C985 /* TnksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TnksStoryboard.storyboard; sourceTree = "<group>"; };
 		22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TnksViewController.swift; sourceTree = "<group>"; };
 		22DCFD9627C93C160013605E /* FeedBack-Team-D-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FeedBack-Team-D-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +52,8 @@
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		909C9C3A27D354E300665F9E /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
+		909C9C3C27D3568E00665F9E /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,8 @@
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				22DCFDB027C9482A0013605E /* HomeViewController.swift */,
 				22F4B5A127CCE9F9004284AB /* StartViewController.swift */,
-				22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */,
+				909C9C3C27D3568E00665F9E /* SurveyViewController.swift */,
+				909C9C3A27D354E300665F9E /* SurveyTableViewCell.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
 				2D863E4527D0783B00D8FCCE /* LoginViewController.swift */,
 			);
@@ -220,13 +223,14 @@
 				2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */,
 				22DCFDB127C9482A0013605E /* HomeViewController.swift in Sources */,
 				2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */,
-				22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */,
+				909C9C3B27D354E300665F9E /* SurveyTableViewCell.swift in Sources */,
 				22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */,
 				22DCFDA427C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld in Sources */,
 				22DCFD9E27C93C160013605E /* ViewController.swift in Sources */,
 				2285CC4F27CE6BB10068D55C /* User+CoreDataClass.swift in Sources */,
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
+				909C9C3D27D3568E00665F9E /* SurveyViewController.swift in Sources */,
 				2285CC5027CE6BB10068D55C /* User+CoreDataProperties.swift in Sources */,
 				22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */,
 			);
@@ -377,7 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SC7ZANG49L;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,7 +410,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SC7ZANG49L;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
