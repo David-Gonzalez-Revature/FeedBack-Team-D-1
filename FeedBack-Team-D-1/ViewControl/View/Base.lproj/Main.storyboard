@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C0p-Jg-HMm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qCx-yL-8ng">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -184,8 +184,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="submitButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aim-jF-mwM"/>
-                                    <segue destination="UQI-Ys-X9d" kind="show" id="5AE-ss-t2Y"/>
+                                    <action selector="login:" destination="qCx-yL-8ng" eventType="touchUpInside" id="TE8-Zh-MiA"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoCityEscapeF" translatesAutoresizingMaskIntoConstraints="NO" id="dpY-h0-w7n">
@@ -199,11 +198,45 @@
                                 <color key="textColor" red="0.98414963479999995" green="0.79190868140000004" blue="0.036851599810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.98414963479999995" green="0.79190868140000004" blue="0.036851599810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U54-mi-7Nr">
+                                <rect key="frame" x="336" y="376" width="44" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="closeeye" title="Button">
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hidePass:" destination="qCx-yL-8ng" eventType="touchUpInside" id="CX1-bM-kBO"/>
+                                    <action selector="hidePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNA-Y0-pX4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxr-Er-8Gp">
+                                <rect key="frame" x="336" y="376" width="44" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="openeye" title="Button">
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showPass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXx-pZ-TS1"/>
+                                    <action selector="showPass:" destination="qCx-yL-8ng" eventType="touchUpInside" id="ueS-7T-wlA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dkT-8H-9Qr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ksz-Y2-gEm"/>
+                    <connections>
+                        <outlet property="hidePas" destination="U54-mi-7Nr" id="C9i-yd-jhA"/>
+                        <outlet property="showP" destination="Bxr-Er-8Gp" id="067-qr-weE"/>
+                        <outlet property="userEmailText" destination="fp1-y0-I7D" id="hDy-w0-qk9"/>
+                        <outlet property="userPasswordText" destination="hhl-bS-tSk" id="cpI-Ih-EsI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmn-gY-8wG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,8 +272,8 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="submitButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jv7-yb-Q2e"/>
-                                    <segue destination="UQI-Ys-X9d" kind="show" id="rXp-yF-uvj"/>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mly-5u-Rmj"/>
+                                    <segue destination="qCx-yL-8ng" kind="show" id="Dve-nT-sth"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.icloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-Rb-3jh" userLabel="userImage">
@@ -299,6 +332,24 @@
                                     <action selector="hidePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xh7-II-14q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ss-u4-rZj">
+                                <rect key="frame" x="94" y="434" width="200" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="squareshape" catalog="system" title="Remember me"/>
+                                <connections>
+                                    <action selector="hideRMB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XmY-9A-rBQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEV-10-mhH">
+                                <rect key="frame" x="94" y="434" width="200" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title="Remember me"/>
+                                <connections>
+                                    <action selector="showRMB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6x-AC-9YW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -307,7 +358,9 @@
                     <connections>
                         <outlet property="error" destination="Dw4-TZ-69j" id="lqS-tg-AO9"/>
                         <outlet property="hidePas" destination="dSD-02-vCD" id="t58-MX-bAw"/>
+                        <outlet property="rememberMeBox" destination="5Ss-u4-rZj" id="y5r-af-kIO"/>
                         <outlet property="showP" destination="cTA-K8-zaA" id="KId-9X-dYi"/>
+                        <outlet property="showRememberMeBox" destination="xEV-10-mhH" id="VOd-Q6-YTn"/>
                         <outlet property="submitButton" destination="ZBz-K8-Rj7" id="e0e-MW-CT8"/>
                         <outlet property="userEmailText" destination="2TZ-Ut-WS0" id="8GP-Yi-VmS"/>
                         <outlet property="userPasswordText" destination="yB2-Yl-BS1" id="Clq-K0-97m"/>
@@ -817,7 +870,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rXp-yF-uvj"/>
         <segue reference="y8p-pY-clL"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -826,6 +878,7 @@
         <image name="Poor" width="216" height="308"/>
         <image name="bed.double" catalog="system" width="128" height="82"/>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="closeeye" width="17" height="13"/>
         <image name="h2" width="312.5" height="175"/>
         <image name="heart" catalog="system" width="128" height="109"/>
@@ -837,6 +890,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="person.icloud" catalog="system" width="128" height="88"/>
+        <image name="squareshape" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
