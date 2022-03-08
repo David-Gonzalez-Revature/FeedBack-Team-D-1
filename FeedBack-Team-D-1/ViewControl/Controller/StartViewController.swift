@@ -21,9 +21,17 @@ class StartViewController: UIViewController {
         userEmailText.text = email
         userPasswordText.text = password
     }
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        
+        if (checkValidAccount() == true) {
+            return true
+        }
+        return false
+    }
     
     let data = DBAuthorizationHelper.inst.getData()
     func checkValidAccount()->Bool{
+        
         for d in data{
             print(d.username, ",", d.password)
             if(email == d.username! && password == d.password){
