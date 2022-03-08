@@ -14,7 +14,7 @@ class StartViewController: UIViewController {
     @IBOutlet weak var userEmailText: UITextField!
     @IBOutlet weak var userPasswordText: UITextField!
     var loginChecked = false
-    var signupChecked = false
+    var signupChecked = true
     var email = ""
     var password = ""
     override func viewDidLoad() {
@@ -38,11 +38,13 @@ class StartViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
+        print("this function gets called")
+        print(loginChecked)
+        print(signupChecked)
         if (checkValidAccount() == true && loginChecked == true) {
             print("login checked and account found")
             return true
         }else if(loginChecked == false && signupChecked == true){
-            print("signup checked")
             return true
             
         } else{
