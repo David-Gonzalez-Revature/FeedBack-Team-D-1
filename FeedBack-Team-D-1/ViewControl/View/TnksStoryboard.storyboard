@@ -89,19 +89,6 @@
                                 <rect key="frame" x="0.0" y="88" width="115" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="59D-5z-8sR">
-                                <rect key="frame" x="61" y="233" width="293" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">We will review your survey in detail and we will provide you with a VIP service as before and much more.
-
-Do you rate us with 100 % ? press a button
-
-Thanks ,</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-rR-kl1">
                                 <rect key="frame" x="64" y="429" width="140" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -125,6 +112,25 @@ Thanks ,</string>
                                     <segue destination="xH3-UW-IZu" kind="presentation" modalPresentationStyle="fullScreen" id="7BJ-2j-TPC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell us" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQb-xq-rxW">
+                                <rect key="frame" x="95" y="635" width="265" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="59D-5z-8sR">
+                                <rect key="frame" x="62" y="215" width="293" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">We will review your survey in detail and we will provide you with a VIP service as before and much more.
+
+                      Do you rate us with 100 % ? 
+press a button and tell us what you think.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,6 +143,7 @@ Thanks ,</string>
                         <outlet property="S5Selected" destination="ATW-kb-mcl" id="Oo3-bb-HMc"/>
                         <outlet property="giftsButton" destination="lvo-85-Aup" id="MKN-86-ppQ"/>
                         <outlet property="happyImage" destination="WfN-lN-d9r" id="YYB-Ad-2b4"/>
+                        <outlet property="label" destination="fQb-xq-rxW" id="kIE-MW-zvh"/>
                         <outlet property="sadImage" destination="smp-Pl-fyS" id="iFE-ky-rea"/>
                     </connections>
                 </viewController>
@@ -342,7 +349,7 @@ Thanks ,</string>
         <image name="logoCityEscapeF" width="452" height="253"/>
         <image name="qr" width="483" height="487"/>
         <image name="sadIcon" width="300" height="300"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star" catalog="system" width="32" height="32"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
