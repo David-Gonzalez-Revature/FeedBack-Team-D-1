@@ -35,6 +35,9 @@
 		22DCFDB127C9482A0013605E /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCFDB027C9482A0013605E /* WellcomeViewController.swift */; };
 		22DCFDB527C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DCFDB427C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard */; };
 		22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B5A127CCE9F9004284AB /* StartViewController.swift */; };
+		2D2D0C8327D731A600536EB0 /* Authorization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D0C8127D731A600536EB0 /* Authorization+CoreDataClass.swift */; };
+		2D2D0C8427D731A600536EB0 /* Authorization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D0C8227D731A600536EB0 /* Authorization+CoreDataProperties.swift */; };
+		2D2D0C8627D731C400536EB0 /* DBAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D0C8527D731C400536EB0 /* DBAuthorizationHelper.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
 		2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */; };
@@ -72,6 +75,9 @@
 		22DCFDB027C9482A0013605E /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		22DCFDB427C94A0E0013605E /* ServicesAndSurveyStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServicesAndSurveyStoryBoard.storyboard; sourceTree = "<group>"; };
 		22F4B5A127CCE9F9004284AB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		2D2D0C8127D731A600536EB0 /* Authorization+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authorization+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D2D0C8227D731A600536EB0 /* Authorization+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authorization+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D2D0C8527D731C400536EB0 /* DBAuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAuthorizationHelper.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenAnimationViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 		2285CC4627CE69550068D55C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D2D0C8127D731A600536EB0 /* Authorization+CoreDataClass.swift */,
+				2D2D0C8227D731A600536EB0 /* Authorization+CoreDataProperties.swift */,
 				226327C827D384C80078BF5B /* UserSurveyServices+CoreDataClass.swift */,
 				226327C927D384C80078BF5B /* UserSurveyServices+CoreDataProperties.swift */,
 				226327CA27D384C80078BF5B /* User+CoreDataClass.swift */,
@@ -110,6 +118,7 @@
 				226327D827D398910078BF5B /* UserScoreGifts+CoreDataClass.swift */,
 				226327D927D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift */,
 				226327CD27D384C80078BF5B /* UserScore+CoreDataProperties.swift */,
+				2D2D0C8527D731C400536EB0 /* DBAuthorizationHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 				226327D127D384C80078BF5B /* UserSurveyServices+CoreDataProperties.swift in Sources */,
 				226327D227D384C80078BF5B /* User+CoreDataClass.swift in Sources */,
 				908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */,
+				2D2D0C8627D731C400536EB0 /* DBAuthorizationHelper.swift in Sources */,
 				2285CC5227CE8BB00068D55C /* CoreDataManage.swift in Sources */,
 				22D0F2C527CCF25200E2C985 /* SurveyViewController.swift in Sources */,
 				22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */,
@@ -285,12 +295,14 @@
 				22DCFD9E27C93C160013605E /* SignUp.swift in Sources */,
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
 				226327DA27D398910078BF5B /* UserScoreGifts+CoreDataClass.swift in Sources */,
+				2D2D0C8327D731A600536EB0 /* Authorization+CoreDataClass.swift in Sources */,
 				226327D327D384C80078BF5B /* User+CoreDataProperties.swift in Sources */,
 				226327DB27D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */,
 				226327D027D384C80078BF5B /* UserSurveyServices+CoreDataClass.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
 				226327D427D384C80078BF5B /* UserScore+CoreDataClass.swift in Sources */,
 				22CEC9BB27D42060002AB800 /* GiftUITableViewController.swift in Sources */,
+				2D2D0C8427D731A600536EB0 /* Authorization+CoreDataProperties.swift in Sources */,
 				22F4B5A227CCE9F9004284AB /* StartViewController.swift in Sources */,
 				226327D527D384C80078BF5B /* UserScore+CoreDataProperties.swift in Sources */,
 			);
