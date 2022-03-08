@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-2188.4057971014495" y="285.9375"/>
         </scene>
-        <!--Start View Controller-->
+        <!--View Controller-->
         <scene sceneID="iXT-yn-09k">
             <objects>
-                <viewController storyboardIdentifier="startView" id="WoB-y6-UVH" customClass="StartViewController" customModule="FeedBack_Team_D_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startView" id="WoB-y6-UVH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FAU-EK-Df9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
