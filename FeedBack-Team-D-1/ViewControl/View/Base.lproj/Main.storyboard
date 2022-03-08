@@ -871,6 +871,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="wUE-2F-rFg"/>
         <segue reference="y8p-pY-clL"/>
     </inferredMetricsTieBreakers>
     <resources>
