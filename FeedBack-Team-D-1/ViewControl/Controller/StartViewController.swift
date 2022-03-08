@@ -23,11 +23,13 @@ class StartViewController: UIViewController {
         userPasswordText.text = password
     }
     
+    //NEED TO FIX TO SEND DATA TO WELCOME PAGE
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let svc = segue.destination as!  WellcomeViewController
         svc.userEmail_Home = userEmailText.text!
         
-    }
+    }*/
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
