@@ -18,8 +18,8 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         //setupUI()
         // Do any additional setup after loading the view.
-        userEmailText.text = email
-        userPasswordText.text = password
+        //userEmailText.text = email
+        //userPasswordText.text = password
     }
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
