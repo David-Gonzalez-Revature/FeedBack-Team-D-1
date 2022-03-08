@@ -15,7 +15,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var imageData = ["Excellent", "Medium", "Poor"]
     var answer = [ "Happy", "Medium", "Poor"]
     
-    var roomQ = ["1. How was room cleaned","2. question 2", "3. Question 3", "4. Question 4", "5. question 5"]
+    var roomQ = ["1. How was room cleaned","2. question 2", "3. Question 3", "4. Question", "5. question 5"]
     var gymQ = [" How was gym", " Gym clean", "question 3", "question 4", "question 5"]
     
     var foodQ = ["how was food", "food tasty","question 3", "question 4", "question 5"]
