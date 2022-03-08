@@ -9,47 +9,33 @@ import UIKit
 import AVFoundation
 
 class TnksViewController: UIViewController {
-    // MARK: - AVAudioPlayer
+    // MARK: - VARS
     var audioPlayer: AVAudioPlayer!
  //   var audioPlayer : AVAudioPlayer!
     var soundNameSad = "sad"
     var soundNameHappy = "happy"
     var emailG = "davisgon@gmail.com"
     
-    func PlayAudio( sound: String){
-        let soundURL = Bundle.main.url(forResource: sound, withExtension: "mp3")
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
-            audioPlayer.play()
-        }
-        catch {
-            print("Error locating sound file: \(error)")
-        }
-        
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    // MARK: - IBOutlet
+    // MARK: - IBOUTLET
     @IBOutlet weak var sadImage: UIImageView!
     @IBOutlet weak var happyImage: UIImageView!
-    
-    
-    
-    
+    @IBOutlet weak var giftsButton: UIButton!
+
     // Buttons
-    @IBOutlet weak var S1NoSelectedButton: UIButton!
+    @IBOutlet weak var S1NoSelectedButton: UIButton! // BAD
     @IBOutlet weak var S1SelectedButton: UIButton!
-    // s5
-    @IBOutlet weak var S5NoSelected: UIButton!
-    
+    @IBOutlet weak var S5NoSelected: UIButton! // GOOD
     @IBOutlet weak var S5Selected: UIButton!
     
       
-    // MARK: - IBOAction
+    // MARK: - IBACTION
     @IBAction func S5_Happy(_ sender: Any) {
         sadImage.isHidden = true
         happyImage.isHidden = false
@@ -57,7 +43,7 @@ class TnksViewController: UIViewController {
         S5Selected.isHidden = false
         S1NoSelectedButton.isHidden = false
         S1SelectedButton.isHidden = true
-        print("aca")
+        giftsButton.isEnabled = true
         PlayAudio( sound: soundNameHappy)
         addDataUserScore(p : 100)
         getDataUserScore()
@@ -69,7 +55,7 @@ class TnksViewController: UIViewController {
         happyImage.isHidden = false
         S5NoSelected.isHidden = false
         S5Selected.isHidden = true
-      
+        giftsButton.isEnabled = false
         
     }
 
@@ -84,6 +70,7 @@ class TnksViewController: UIViewController {
         S5Selected.isHidden = true
         addDataUserScore(p : 60)
         getDataUserScore()
+        giftsButton.isEnabled = true
         getOneDataUserScore( p : emailG)
        
         
@@ -94,16 +81,34 @@ class TnksViewController: UIViewController {
         happyImage.isHidden = false
         S1NoSelectedButton.isHidden = false
         S1SelectedButton.isHidden = true
+        giftsButton.isEnabled = false
     }
     
     
     @IBAction func recuperaData(_ sender: Any) {
-        
        // getOneDataUser()
        // addDataUserScore()
         //getOneDataUserScore()
         getDataUserScore()
     }
+    
+    
+    
+    
+    // MARK: FUNCTIONS
+    func PlayAudio( sound: String){
+        let soundURL = Bundle.main.url(forResource: sound, withExtension: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+            audioPlayer.play()
+        }
+        catch {
+            print("Error locating sound file: \(error)")
+        }
+        
+    }
+    
+    // MARK: - CORE DATA USER-SCORE
   //  var userEmail_Home = ""
     func getOneDataUser() {
         let pMail = "userEmailText.text!"
@@ -113,7 +118,7 @@ class TnksViewController: UIViewController {
         
     }
     
-    // MARK: - CORE DATA USER-SCORE
+ 
     func addDataUserScore(p : Int32){
         let date = Date()
         CoreDataManage.inst.addDataUserUserScore(emailP: "davisgon@gmail.com", scoreP: Int(p), dateCreated: date  )

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xp0-KQ-CqG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xp0-KQ-CqG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -61,7 +61,7 @@
                                     <action selector="S5Selected:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PUB-FI-IAZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvo-85-Aup">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvo-85-Aup">
                                 <rect key="frame" x="107" y="699" width="192" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.65008622407913208" green="0.80628520250320435" blue="0.22201961278915405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,6 +135,7 @@ Thanks ,</string>
                         <outlet property="S1SelectedButton" destination="UgI-rR-kl1" id="fJe-Pk-ymh"/>
                         <outlet property="S5NoSelected" destination="PIa-Hx-c3H" id="nl5-ak-Ai7"/>
                         <outlet property="S5Selected" destination="ATW-kb-mcl" id="Oo3-bb-HMc"/>
+                        <outlet property="giftsButton" destination="lvo-85-Aup" id="MKN-86-ppQ"/>
                         <outlet property="happyImage" destination="WfN-lN-d9r" id="YYB-Ad-2b4"/>
                         <outlet property="sadImage" destination="smp-Pl-fyS" id="iFE-ky-rea"/>
                     </connections>

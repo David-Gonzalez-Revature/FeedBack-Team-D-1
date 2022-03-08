@@ -73,7 +73,7 @@ class WellcomeViewController: UIViewController {
    // }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Funciona11111111")
+        print("prepare")
         
 //        let svc = segue.destination as!  TnksViewController
 //        

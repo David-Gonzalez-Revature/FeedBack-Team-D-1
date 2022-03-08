@@ -790,7 +790,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rXp-yF-uvj"/>
-        <segue reference="y8p-pY-clL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Excellent" width="274" height="288"/>

@@ -9,7 +9,7 @@ import UIKit
 
 class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: - IB
+    // MARK: - IBOutlet
     @IBOutlet weak var goodR: UILabel!
     @IBOutlet weak var badR: UILabel!
     @IBOutlet weak var qrImage: UIImageView!
@@ -17,7 +17,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var endMesagge: UILabel!
     @IBOutlet weak var selectButton: UIButton!
     
-    
+    // MARK: - VARS
     var gifts    = ["Hotel", "Food", "Amazone","Gas"]
     
     override func viewDidLoad() {
@@ -27,11 +27,11 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    // MARK: - rows values
+    // MARK: - ROWS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let giftsCell = tableView.dequeueReusableCell(withIdentifier: "giftsCell") as! GiftUITableViewController
         getDataUserScore()
-        print("1.- --------------------- Rows  Values  ",indexPath.section)
+        //print("1.- --------------------- Rows  Values  ",indexPath.section)
         switch indexPath.section {
         case 0: // General section 1
             giftsCell.descGift.text = gifts[indexPath.row]
@@ -45,7 +45,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gifts.count
     }
-    
+    // MARK: - RANKING VALUES
     func getDataUserScore() {
         let data = CoreDataManage.inst.getDataUserScore() //.getData()
         var good = 0
@@ -68,7 +68,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    // MARK: - SELECTED CELL & RANDOM
+    // MARK: - SELECTED CELL
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         giftSelect.isHidden = false
         qrImage.isHidden = false
@@ -77,8 +77,9 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         giftSelect.text = "Your coupon:   " + gifts[indexPath.row]+"-"+random
         //  print("Gift Selected*  11111" ,indexPath.row ,gifts[indexPath.row] )
     }
+    // MARK: - RANDOM-coupon
     
-    // Generating Random String
+    // Generating Random String for coupon
     func randomString(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         return String((0..<length).map{ _ in letters.randomElement()! })

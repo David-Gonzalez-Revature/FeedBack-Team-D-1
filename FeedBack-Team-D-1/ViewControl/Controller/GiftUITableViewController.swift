@@ -9,11 +9,8 @@ import UIKit
 
 class GiftUITableViewController: UITableViewCell {
 
-
-  
     
     @IBOutlet weak var gitImg: UIImageView!
-    
     @IBOutlet weak var descGift: UILabel!
     
 
@@ -27,11 +24,11 @@ class GiftUITableViewController: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        if selected{
-            print("1 GiftUITableViewController  setSelected",selected.self.description)
-        }else{
-            print("Not Selected",selected)
-        }
+//        if selected{
+//            print("1 GiftUITableViewController  setSelected",selected.self.description)
+//        }else{
+//            print("Not Selected",selected)
+//        }
         
        
         // Configure the view for the selected state
