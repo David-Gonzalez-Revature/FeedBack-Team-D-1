@@ -39,6 +39,8 @@
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
 		2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */; };
 		908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */; };
+		90BBC14627D77E3D00E8CE93 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBC14527D77E3D00E8CE93 /* GymViewController.swift */; };
+		90BBC14827D782FC00E8CE93 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBC14727D782FC00E8CE93 /* FoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenAnimationViewController.swift; sourceTree = "<group>"; };
 		908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
+		90BBC14527D77E3D00E8CE93 /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
+		90BBC14727D782FC00E8CE93 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 				22DCFDB027C9482A0013605E /* WellcomeViewController.swift */,
 				908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */,
 				22D0F2C427CCF25200E2C985 /* SurveyViewController.swift */,
+				90BBC14527D77E3D00E8CE93 /* GymViewController.swift */,
+				90BBC14727D782FC00E8CE93 /* FoodViewController.swift */,
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
 				2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */,
@@ -281,6 +287,7 @@
 				22D0F2C927CCF6F500E2C985 /* TnksViewController.swift in Sources */,
 				22DCFDA427C93C160013605E /* FeedBack_Team_D_1.xcdatamodeld in Sources */,
 				22CEC9B927D41A96002AB800 /* GiftsViewController.swift in Sources */,
+				90BBC14827D782FC00E8CE93 /* FoodViewController.swift in Sources */,
 				2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */,
 				22DCFD9E27C93C160013605E /* SignUp.swift in Sources */,
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
@@ -288,6 +295,7 @@
 				226327D327D384C80078BF5B /* User+CoreDataProperties.swift in Sources */,
 				226327DB27D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */,
 				226327D027D384C80078BF5B /* UserSurveyServices+CoreDataClass.swift in Sources */,
+				90BBC14627D77E3D00E8CE93 /* GymViewController.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
 				226327D427D384C80078BF5B /* UserScore+CoreDataClass.swift in Sources */,
 				22CEC9BB27D42060002AB800 /* GiftUITableViewController.swift in Sources */,
