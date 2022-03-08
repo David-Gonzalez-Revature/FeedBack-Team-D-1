@@ -125,8 +125,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">We will review your survey in detail and we will provide you with a VIP service as before and much more.
 
-Do you rate us with 100 % ? press a button
-and tell us what you think.</string>
+                      Do you rate us with 100 % ? 
+press a button and tell us what you think.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -349,7 +349,7 @@ and tell us what you think.</string>
         <image name="logoCityEscapeF" width="452" height="253"/>
         <image name="qr" width="483" height="487"/>
         <image name="sadIcon" width="300" height="300"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star" catalog="system" width="32" height="32"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
