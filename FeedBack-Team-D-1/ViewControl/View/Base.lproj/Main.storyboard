@@ -227,15 +227,6 @@
                                     <action selector="showPass:" destination="qCx-yL-8ng" eventType="touchUpInside" id="ueS-7T-wlA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twj-xQ-pqh">
-                                <rect key="frame" x="133" y="572" width="130" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="View"/>
-                                <connections>
-                                    <action selector="viewData:" destination="qCx-yL-8ng" eventType="touchUpInside" id="k9s-YJ-Wi8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abW-16-c5i">
                                 <rect key="frame" x="87" y="265" width="292" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -366,15 +357,6 @@
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title="Remember me"/>
                                 <connections>
                                     <action selector="showRMB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6x-AC-9YW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-KI-XOU">
-                                <rect key="frame" x="129" y="574" width="130" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="View"/>
-                                <connections>
-                                    <action selector="viewData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVR-m1-CHG"/>
                                 </connections>
                             </button>
                         </subviews>
