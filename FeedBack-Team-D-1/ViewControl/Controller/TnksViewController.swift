@@ -130,11 +130,13 @@ class TnksViewController: UIViewController {
             self.label.text = msg!
             
             
+            
             var str : String = ""
             for seg in  resp!.bestTranscription.segments{
                 let indexTo = msg!.index(msg!.startIndex, offsetBy: seg.substringRange.location)
                 str = String(msg![indexTo...])
             }
+            self.giftsButton.isEnabled = true
             // *** reconigzer
 //            switch str{
 //            case "blue":
