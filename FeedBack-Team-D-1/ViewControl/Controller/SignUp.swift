@@ -118,14 +118,12 @@ class SignUp: UIViewController {
         }else{
             if(checkReusedUsername() == true){
                 error.text = "Username already exists."
-            } else if(userEmailText.text?.isEmpty != nil){
-                error.text = "Please enter a username."
-            } else if(userEmailText.text?.isEmail == false){
-                error.text = "Please enter a valid username." //need to check why this condition doesn't evaluate
-            } else if(userPasswordText.text?.isEmpty != nil){
+            }else if(userEmailText.text! == ""){
+                error.text = "Please enter an email."
+            }else if(userPasswordText.text! == ""){
                 error.text = "Please enter a password."
-            } else if(userPasswordText.text?.isEmpty != nil && userEmailText.text?.isEmpty != nil){
-                error.text = "Please enter a username and password."
+            } else if(userEmailText.text?.isEmail == false){
+                error.text = "Email is invalid. Try abc@gmail.com." //need to check why this condition doesn't evaluate
             }
         }
         
