@@ -227,12 +227,29 @@
                                     <action selector="showPass:" destination="qCx-yL-8ng" eventType="touchUpInside" id="ueS-7T-wlA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twj-xQ-pqh">
+                                <rect key="frame" x="133" y="572" width="130" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="View"/>
+                                <connections>
+                                    <action selector="viewData:" destination="qCx-yL-8ng" eventType="touchUpInside" id="k9s-YJ-Wi8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abW-16-c5i">
+                                <rect key="frame" x="87" y="265" width="292" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dkT-8H-9Qr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ksz-Y2-gEm"/>
                     <connections>
+                        <outlet property="error" destination="abW-16-c5i" id="iWL-tX-FfC"/>
                         <outlet property="hidePas" destination="U54-mi-7Nr" id="C9i-yd-jhA"/>
                         <outlet property="showP" destination="Bxr-Er-8Gp" id="067-qr-weE"/>
                         <outlet property="userEmailText" destination="fp1-y0-I7D" id="hDy-w0-qk9"/>
@@ -349,6 +366,15 @@
                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title="Remember me"/>
                                 <connections>
                                     <action selector="showRMB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6x-AC-9YW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9X-KI-XOU">
+                                <rect key="frame" x="129" y="574" width="130" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="View"/>
+                                <connections>
+                                    <action selector="viewData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVR-m1-CHG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -871,7 +897,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wUE-2F-rFg"/>
+        <segue reference="uNf-wo-IPY"/>
+        <segue reference="Dve-nT-sth"/>
         <segue reference="y8p-pY-clL"/>
     </inferredMetricsTieBreakers>
     <resources>
