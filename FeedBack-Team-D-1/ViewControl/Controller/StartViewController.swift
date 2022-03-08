@@ -28,16 +28,17 @@ class StartViewController: UIViewController {
     
 
     //NEED TO FIX TO SEND DATA TO WELCOME PAGE
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let svc = segue.destination as!  WellcomeViewController
-        svc.userEmail_Home = userEmailText.text!
-        
-    }*/
+        if (checkValidAccount() == true && loginChecked == true){
+            let svc = segue.destination as!  WellcomeViewController
+            svc.userEmail_Home = userEmailText.text!
+        }
+    }
     
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
-        
+    
         print("this function gets called")
         print(loginChecked)
         print(signupChecked)
@@ -48,15 +49,18 @@ class StartViewController: UIViewController {
             return true
             
         } else{
-            if(userEmailText.text?.isEmpty != nil){
-                error.text = "Please enter a username."
-            } else if(userEmailText.text?.isEmail == false){
-                error.text = "Please enter a valid username." //need to check why this condition doesn't evaluate
-            } else if(userPasswordText.text?.isEmpty != nil){
+            error.text = ""
+            if(userEmailText.text! == ""){
+                print("first error")
+                error.text = "Please enter an email."
+            }else if(userPasswordText.text! == ""){
+                print("second error")
                 error.text = "Please enter a password."
-            } else if(userPasswordText.text?.isEmpty != nil && userEmailText.text?.isEmpty != nil){
-                error.text = "Please enter a username and password."
+            } else if(checkValidAccount() == false){
+                print("third error")
+                error.text = "Email or password is wrong. Try again."
             }
+            
         }
         return false
     }
@@ -121,7 +125,7 @@ class StartViewController: UIViewController {
         //        }
     }
     
-    func viewData(_ sender: Any) {
+    @IBAction func viewData(_ sender: Any) {
         let data = DBAuthorizationHelper.inst.getData()
         for d in data{
             print(d.username,",",d.password)
@@ -130,21 +134,18 @@ class StartViewController: UIViewController {
     @IBAction func signup(_ sender: Any) {
         loginChecked = false
         signupChecked = true
-        print("inside signup")
         print(loginChecked)
         print(signupChecked)
-        print("-----")
+        print("--------")
     }
     @IBAction func login(_ sender: Any) {
         //viewData((Any).self)
         loginChecked = true
-        signupChecked = false
-        print("inside login")
         print(loginChecked)
         print(signupChecked)
-        print("-----")
+        print("--------")
     }
-    func ViewData() {
+    @IBAction func ViewData() {
         // Set query
         let q : [String : Any] = [ kSecClass  as String : kSecClassGenericPassword,
                                    kSecAttrAccount as String : userEmailText.text,

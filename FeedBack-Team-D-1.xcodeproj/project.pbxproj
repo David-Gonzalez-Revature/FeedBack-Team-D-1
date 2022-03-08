@@ -150,6 +150,7 @@
 		2285CC4A27CE69980068D55C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */,
 				2D863E4527D0783B00D8FCCE /* LoginViewController.swift */,
 				22F4B5A127CCE9F9004284AB /* StartViewController.swift */,
 				22CEC9B827D41A96002AB800 /* GiftsViewController.swift */,
@@ -162,7 +163,6 @@
 				90BBC14727D782FC00E8CE93 /* FoodViewController.swift */,
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
-				2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

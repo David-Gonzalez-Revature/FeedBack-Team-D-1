@@ -139,6 +139,14 @@ class SplashscreenAnimationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Commented out code will delete core data
+        //use for testing purposes only
+        /*
+        let data = DBAuthorizationHelper.inst.getData()
+        for d in data{
+            DBAuthorizationHelper.inst.deleteData(n: d.username!)
+        }
+         */
         startAnimate()
         startSpeechRec()
         // Do any additional setup after loading the view.

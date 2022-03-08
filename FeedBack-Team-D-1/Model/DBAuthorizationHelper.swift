@@ -45,7 +45,7 @@ class DBAuthorizationHelper{
     
     func deleteData(n: String){
             var fReq = NSFetchRequest<NSManagedObject>.init(entityName: "Authorization")
-            fReq.predicate = NSPredicate(format: "name == %@", n)
+            fReq.predicate = NSPredicate(format: "username == %@", n)
 
             do{
                 let st = try context?.fetch(fReq)
