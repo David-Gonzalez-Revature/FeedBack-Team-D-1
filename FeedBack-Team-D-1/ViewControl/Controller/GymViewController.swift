@@ -1,24 +1,19 @@
 //
-//  SurveyViewController.swift
+//  GymViewController.swift
 //  FeedBack-Team-D-1
 //
-//  Created by David Gonzalez on 2/28/22.
+//  Created by Stephanie Marin Velasquez on 3/8/22.
 //
 
 import UIKit
 
-class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    
-    //MARK Questions data
+class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     var imageData = ["Excellent", "Medium", "Poor"]
     var answer = [ "Excellent", "Medium", "Poor"]
-    var roomQ = ["1. How was room cleaned","2. question", "3. Question", "4. Question", "5. question"]
     
-   
+    var gymQ = ["1. How was gym", "2. Gym clean", "3. question ", "4 question ", "5. question "]
     
-
     
     //displaying section of question with full tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -153,15 +148,15 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         switch section{
         case 0:
-            return roomQ[section]
+            return gymQ[section]
         case 1:
-            return roomQ[section]
+            return gymQ[section]
         case 2:
-            return roomQ[section]
+            return gymQ[section]
         case 3:
-            return roomQ[section]
+            return gymQ[section]
         case 4:
-            return roomQ[section]
+            return gymQ[section]
         default:
             return ""
             
@@ -232,46 +227,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
 
-
-//    saImage.isHidden = false
-//    HappyImage.isHidden = true
-    
-    //this section attempt to make switch as for loop ----------------
-    
-//        for i in 0...roomQ.count {
-//            print("somos lo maximo")
-//            for j in 0...answer.count{
-//                switch indexPath.section{
-//                    case 0:
-//                    cellQ1.excellentlb.text = answer[indexPath.row]
-//                    cellQ1.exImg.image = UIImage(named: imageData[indexPath.row])
-//                    return cellQ1
-//                case 1:
-//                    cellQ2.mediumlb.text = answer[indexPath.row]
-//                    cellQ2.medImg.image = UIImage(named: imageData[indexPath.row])
-//                    return cellQ2
-//                case 2:
-//                    cellQ3.sadlb.text = answer[indexPath.row]
-//                    cellQ3.sadImg.image = UIImage(named: imageData[indexPath.row])
-//                    return cellQ3
-//                default:
-//                    return cellQ1
-//                }
-//            }
-//        }
-
-//        }
-    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
