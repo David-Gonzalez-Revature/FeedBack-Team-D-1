@@ -13,6 +13,8 @@ class StartViewController: UIViewController {
     @IBOutlet weak var showP: UIButton!
     @IBOutlet weak var userEmailText: UITextField!
     @IBOutlet weak var userPasswordText: UITextField!
+    var loginChecked = false
+    var signupChecked = false
     var email = ""
     var password = ""
     override func viewDidLoad() {
@@ -21,8 +23,10 @@ class StartViewController: UIViewController {
         // Do any additional setup after loading the view.
         userEmailText.text = email
         userPasswordText.text = password
+        
     }
     
+
     //NEED TO FIX TO SEND DATA TO WELCOME PAGE
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,11 +35,17 @@ class StartViewController: UIViewController {
         
     }*/
     
+    
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
-        if (checkValidAccount() == true) {
+        if (checkValidAccount() == true && loginChecked == true) {
+            print("login checked and account found")
             return true
-        }else{
+        }else if(loginChecked == false && signupChecked == true){
+            print("signup checked")
+            return true
+            
+        } else{
             if(userEmailText.text?.isEmpty != nil){
                 error.text = "Please enter a username."
             } else if(userEmailText.text?.isEmail == false){
@@ -52,7 +62,6 @@ class StartViewController: UIViewController {
     func checkValidAccount()->Bool{
         let data = DBAuthorizationHelper.inst.getData()
         for d in data{
-            print(d.username, ",", d.password)
             if(userEmailText.text! == d.username! && userPasswordText.text! == d.password){
                 print("true")
                 return true
@@ -116,9 +125,22 @@ class StartViewController: UIViewController {
             print(d.username,",",d.password)
         }
     }
+    @IBAction func signup(_ sender: Any) {
+        loginChecked = false
+        signupChecked = true
+        print("inside signup")
+        print(loginChecked)
+        print(signupChecked)
+        print("-----")
+    }
     @IBAction func login(_ sender: Any) {
         //viewData((Any).self)
-        checkValidAccount()
+        loginChecked = true
+        signupChecked = false
+        print("inside login")
+        print(loginChecked)
+        print(signupChecked)
+        print("-----")
     }
     func ViewData() {
         // Set query
