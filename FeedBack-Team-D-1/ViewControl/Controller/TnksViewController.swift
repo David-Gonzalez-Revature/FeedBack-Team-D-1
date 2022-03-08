@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Speech
 
 class TnksViewController: UIViewController {
     // MARK: - VARS
@@ -16,10 +17,14 @@ class TnksViewController: UIViewController {
     var soundNameHappy = "happy"
     var emailG = "davisgon@gmail.com"
     
-   
+    let audioEng = AVAudioEngine()
+    let req = SFSpeechAudioBufferRecognitionRequest()
+    let speechR = SFSpeechRecognizer()
+    var rTask : SFSpeechRecognitionTask!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startSpeechRec()
 
         // Do any additional setup after loading the view.
     }
@@ -27,7 +32,8 @@ class TnksViewController: UIViewController {
     @IBOutlet weak var sadImage: UIImageView!
     @IBOutlet weak var happyImage: UIImageView!
     @IBOutlet weak var giftsButton: UIButton!
-
+    @IBOutlet weak var label: UILabel!
+    
     // Buttons
     @IBOutlet weak var S1NoSelectedButton: UIButton! // BAD
     @IBOutlet weak var S1SelectedButton: UIButton!
@@ -48,6 +54,7 @@ class TnksViewController: UIViewController {
         addDataUserScore(p : 100)
         getDataUserScore()
         getOneDataUserScore( p : emailG)
+        cancellSpeechRec()
     }
     
     @IBAction func S5Selected(_ sender: Any) {
@@ -94,8 +101,72 @@ class TnksViewController: UIViewController {
     
     
     
+    // ******************************     FUNC
+    // MARK: FUNCTIOS
+    // MARK: SPEECH
+    func startSpeechRec(){
+        let nd = audioEng.inputNode
+        let recordF = nd.outputFormat(forBus: 0)
+        nd.installTap(onBus: 0, bufferSize: 1024, format: recordF)
+                      {
+            (buffer , _ ) in self.req.append(buffer)
+        }
+        audioEng.prepare()
+        do {
+            try audioEng.start()
+        }catch let err {
+            printContent(err)
+        }
+        
+        rTask  = speechR?.recognitionTask(with: req, resultHandler: {
+            (resp, error) in
+            
+            guard let rsp = resp else{
+                print(error.debugDescription)
+                
+                return
+            }
+            let msg = resp?.bestTranscription.formattedString
+            self.label.text = msg!
+            
+            
+            var str : String = ""
+            for seg in  resp!.bestTranscription.segments{
+                let indexTo = msg!.index(msg!.startIndex, offsetBy: seg.substringRange.location)
+                str = String(msg![indexTo...])
+            }
+            // *** reconigzer
+//            switch str{
+//            case "blue":
+//                self.view.backgroundColor = .blue
+//            case "yellow":
+//                self.view.backgroundColor = .yellow
+//            default :
+//                self.view.backgroundColor = .none
+//            }
+            
+            
+        
+        })
+        
+        
+        print("start")
+    }
     
-    // MARK: FUNCTIONS
+    func cancellSpeechRec(){
+        rTask.finish()
+        rTask.cancel()
+        rTask = nil
+        req.endAudio()
+        audioEng.stop()
+        
+        if audioEng.inputNode.numberOfInputs > 0 {
+            audioEng.inputNode.removeTap(onBus: 0)
+        }
+        print("cancel")
+    }
+    
+    // MARK: PLAY AUDIO
     func PlayAudio( sound: String){
         let soundURL = Bundle.main.url(forResource: sound, withExtension: "mp3")
         do {

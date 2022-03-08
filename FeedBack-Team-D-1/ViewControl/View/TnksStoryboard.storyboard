@@ -125,6 +125,13 @@ Thanks ,</string>
                                     <segue destination="xH3-UW-IZu" kind="presentation" modalPresentationStyle="fullScreen" id="7BJ-2j-TPC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQb-xq-rxW">
+                                <rect key="frame" x="95" y="635" width="265" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,6 +144,7 @@ Thanks ,</string>
                         <outlet property="S5Selected" destination="ATW-kb-mcl" id="Oo3-bb-HMc"/>
                         <outlet property="giftsButton" destination="lvo-85-Aup" id="MKN-86-ppQ"/>
                         <outlet property="happyImage" destination="WfN-lN-d9r" id="YYB-Ad-2b4"/>
+                        <outlet property="label" destination="fQb-xq-rxW" id="kIE-MW-zvh"/>
                         <outlet property="sadImage" destination="smp-Pl-fyS" id="iFE-ky-rea"/>
                     </connections>
                 </viewController>
