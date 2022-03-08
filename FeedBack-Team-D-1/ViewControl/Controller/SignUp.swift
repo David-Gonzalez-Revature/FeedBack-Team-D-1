@@ -26,46 +26,110 @@ class SignUp: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var userEmailText: UITextField!
-    
     @IBOutlet weak var error: UILabel!
     @IBOutlet weak var userPasswordText: UITextField!
-    
-    
     @IBOutlet weak var hidePas: UIButton!
     @IBOutlet weak var showP: UIButton!
-    
+    @IBOutlet weak var rememberMeBox: UIButton!
+    @IBOutlet weak var showRememberMeBox: UIButton!
     
     
     // MARK: - IBActions
     @IBOutlet weak var submitButton: UIButton!
-    // MARK: - STUP SUBMIT BUTTON
-    @IBAction func submitButton2(_ sender: Any) {
-        performLogin()
-        addDataUser()
-        getOneDataUser()
-        
-    }
     
-    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Inicio Register")
         setupUI()
     //    ShowPassword()
         userPasswordText.isSecureTextEntry = true
     }
     
+    private func performLogin() {
+        if userEmailText.text!.isEmail {
+            print("\(String(describing: userEmailText.text!)) is a valid e-mail address")
+        //    userEmailText.backgroundColor = .white
+            SaveData()
+            ViewData()
+            error.backgroundColor = .gray
+            error.text = "welcomePage"
+        } else {
+            print("\(userEmailText.text!) is not a valid e-mail address")
+           // userEmailText.backgroundColor = .red
+            error.backgroundColor = .red
+            error.text = "is not a valid e-mail address"
+            
+            userEmailText.tintColor = .white
+        }
+    }
     
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        
+        if (userEmailText.text!.isEmail && checkReusedUsername() == false) {
+            return true
+        }
+        return false
+    }
+    
+    
+    func  isValidEmail( userEmailText : String) -> Bool {
+        NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
+    }
+    
+    let data = DBAuthorizationHelper.inst.getData()
+    func checkReusedUsername()->Bool{
+        for d in data{
+            if(userEmailText.text! == d.username!){
+                print(userEmailText.text!)
+                return true
+            }
+        }
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(rememberMeBox.isHidden == true){
+            let svc = segue.destination as!  StartViewController
+            svc.email = userEmailText.text!
+            svc.password = userPasswordText.text!
+        }
+    }
+    
+    @IBAction func submit(_ sender: Any) {
+        //check conditional statements for proper navigation
+        if(checkReusedUsername()==false && userEmailText.text?.isEmpty != nil && userEmailText.text?.isEmail == true){
+            if(rememberMeBox.isHidden == true){
+                SaveData()
+                //ViewData()
+            }
+            DBAuthorizationHelper.inst.addDAta(n: userEmailText.text!, m: userPasswordText.text!)
+            print("password saved")
+            let newData = DBAuthorizationHelper.inst.getData()
+            for d in newData{
+                if(userEmailText.text! == d.username!){
+                    print(userEmailText.text!)
+                }
+            }
+        }else{
+            if(checkReusedUsername() == true){
+                error.text = "Username already exists."
+            } else if(userEmailText.text?.isEmpty != nil){
+                error.text = "Please enter a username."
+            } else if(userEmailText.text?.isEmail == false){
+                error.text = "Please enter a valid username." //need to check why this condition doesn't evaluate
+            } else if(userPasswordText.text?.isEmpty != nil){
+                error.text = "Please enter a password."
+            } else if(userPasswordText.text?.isEmpty != nil && userEmailText.text?.isEmpty != nil){
+                error.text = "Please enter a username and password."
+            }
+        }
+        
+    }
     @IBAction func showPass(_ sender: Any) {
        
         print("Change passs")
         userPasswordText.isSecureTextEntry = false
-        
         hidePas.isHidden = false
         showP.isHidden = true
-      
-        
-        
     }
     
     @IBAction func hidePass(_ sender: Any) {
@@ -75,9 +139,17 @@ class SignUp: UIViewController {
         showP.isHidden = false
     
     }
+    @IBAction func showRMB(_ sender: Any) {
+        print("false")
+        showRememberMeBox.isHidden = true
+        rememberMeBox.isHidden = false
+    }
     
-    
-    
+    @IBAction func hideRMB(_ sender: Any) {
+        print("true")
+        showRememberMeBox.isHidden = false
+        rememberMeBox.isHidden = true
+    }
     
     func ShowPassword() {
         // ***************************** Passs *******************************
@@ -111,76 +183,11 @@ class SignUp: UIViewController {
         //            }
         //        }
     }
-    
-    // MARK: - FUNCTIONS
-    
     private func setupUI() {
         submitButton.layer.cornerRadius = 20
+        showRememberMeBox.isHidden = true
+        rememberMeBox.isHidden = false
     }
-    // MARK: - Email , pass
-    private func performLogin() {
-        if userEmailText.text!.isEmail {
-            print("\(String(describing: userEmailText.text!)) is a valid e-mail address")
-        //    userEmailText.backgroundColor = .white
-            SaveData()
-            ViewData()
-            error.backgroundColor = .gray
-            error.text = "welcomePage"
-        } else {
-            print("\(userEmailText.text!) is not a valid e-mail address")
-           // userEmailText.backgroundColor = .red
-            error.backgroundColor = .red
-            error.text = "is not a valid e-mail address"
-            
-            userEmailText.tintColor = .white
-        }
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
-        if userEmailText.text!.isEmail {
-            return true
-        }else{
-            return false
-        }
-    }
-    
-    
-    func  isValidEmail( userEmailText : String) -> Bool {
-        NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
-    }
-    
-//    func sendEmail() {
-//        if MFMailComposeViewController.canSendMail() {
-//            let mail = MFMailComposeViewController()
-//            mail.mailComposeDelegate = self
-//            mail.setToRecipients(["davisgon@gmail.com"])
-//            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-//
-//            present(mail, animated: true)
-//        } else {
-//            // show failure alert
-//        }
-//    }
-//
-//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-//        controller.dismiss(animated: true)
-//    }
-    
-    // MARK: - CORE DATA
-    func addDataUser(){
-        let date = Date()
-        CoreDataManage.inst.addDataUser(emailP: userEmailText.text!, passwordP: userPasswordText.text!, dateCreated: date  )
-        print("Data Saved into USER Entity")
-    }
-    
-    func getOneDataUser() {
-        var d =  CoreDataManage.inst.getOneDataUser(n: userEmailText.text!)
-      
-        print("GetOneDataUser from USER ", d.email," Pass ", d.password, "Date Created ", d.dateCreated)
-        
-    }
-    
-    
     
     // MARK: - KeyChain
     // KeyChain
@@ -215,7 +222,7 @@ class SignUp: UIViewController {
                let uid = item[kSecAttrAccount as String] as? String,
                let password = item [ kSecValueData  as String] as? Data,
                let pass = String(data: password, encoding: .utf8){
-                print("******:Id is :", userEmailText.text!, " Passs is:" )
+                print("******:Id is :", uid, " Passs is:" , pass)
             }
             else{
                 print("no data Found")
@@ -225,12 +232,40 @@ class SignUp: UIViewController {
     }
     
     // MARK: - Prepare Send Data
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let svc = segue.destination as!  WellcomeViewController
+        let svc = segue.destination as!  StartViewController
         print("******:Id is :", userEmailText.text!, " Passs is:" )
         
         svc.userEmail_Home = userEmailText.text!
     }
+    */
+    // MARK: - STUP SUBMIT BUTTON
+    /*
+    @IBAction func submitButton2(_ sender: Any) {
+        performLogin()
+        addDataUser()
+        getOneDataUser()
+        
+    }
+    */
+    
+//    func sendEmail() {
+//        if MFMailComposeViewController.canSendMail() {
+//            let mail = MFMailComposeViewController()
+//            mail.mailComposeDelegate = self
+//            mail.setToRecipients(["davisgon@gmail.com"])
+//            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+//
+//            present(mail, animated: true)
+//        } else {
+//            // show failure alert
+//        }
+//    }
+//
+//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+//        controller.dismiss(animated: true)
+//    }
     
 }
 
