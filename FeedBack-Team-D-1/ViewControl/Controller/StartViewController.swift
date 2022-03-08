@@ -9,6 +9,7 @@ import UIKit
 
 class StartViewController: UIViewController {
     @IBOutlet weak var hidePas: UIButton!
+    @IBOutlet weak var error: UILabel!
     @IBOutlet weak var showP: UIButton!
     @IBOutlet weak var userEmailText: UITextField!
     @IBOutlet weak var userPasswordText: UITextField!
@@ -18,23 +19,39 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         //setupUI()
         // Do any additional setup after loading the view.
-        //userEmailText.text = email
-        //userPasswordText.text = password
+        userEmailText.text = email
+        userPasswordText.text = password
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let svc = segue.destination as!  WellcomeViewController
+        svc.userEmail_Home = userEmailText.text!
+        
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         
         if (checkValidAccount() == true) {
             return true
+        }else{
+            if(userEmailText.text?.isEmpty != nil){
+                error.text = "Please enter a username."
+            } else if(userEmailText.text?.isEmail == false){
+                error.text = "Please enter a valid username." //need to check why this condition doesn't evaluate
+            } else if(userPasswordText.text?.isEmpty != nil){
+                error.text = "Please enter a password."
+            } else if(userPasswordText.text?.isEmpty != nil && userEmailText.text?.isEmpty != nil){
+                error.text = "Please enter a username and password."
+            }
         }
         return false
     }
     
-    let data = DBAuthorizationHelper.inst.getData()
     func checkValidAccount()->Bool{
-        
+        let data = DBAuthorizationHelper.inst.getData()
         for d in data{
             print(d.username, ",", d.password)
-            if(email == d.username! && password == d.password){
+            if(userEmailText.text! == d.username! && userPasswordText.text! == d.password){
                 print("true")
                 return true
             }
@@ -91,7 +108,14 @@ class StartViewController: UIViewController {
         //        }
     }
     
+    func viewData(_ sender: Any) {
+        let data = DBAuthorizationHelper.inst.getData()
+        for d in data{
+            print(d.username,",",d.password)
+        }
+    }
     @IBAction func login(_ sender: Any) {
+        //viewData((Any).self)
         checkValidAccount()
     }
     func ViewData() {

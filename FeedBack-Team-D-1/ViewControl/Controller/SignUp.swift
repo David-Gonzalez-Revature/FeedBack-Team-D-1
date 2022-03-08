@@ -70,6 +70,12 @@ class SignUp: UIViewController {
         return false
     }
     
+    @IBAction func viewData(_ sender: Any) {
+        let data = DBAuthorizationHelper.inst.getData()
+        for d in data{
+            print(d.username,",",d.password)
+        }
+    }
     
     func  isValidEmail( userEmailText : String) -> Bool {
         NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
