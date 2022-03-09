@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xp0-KQ-CqG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -356,7 +356,7 @@ press a button and tell us what you think.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JHU-ks-C6j"/>
+        <segue reference="7BJ-2j-TPC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="happy" width="1386" height="1008"/>
@@ -365,7 +365,7 @@ press a button and tell us what you think.</string>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="qr" width="483" height="487"/>
         <image name="sadIcon" width="300" height="300"/>
-        <image name="star" catalog="system" width="32" height="32"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

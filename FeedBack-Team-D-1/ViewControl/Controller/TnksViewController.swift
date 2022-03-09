@@ -16,6 +16,8 @@ class TnksViewController: UIViewController {
     var soundNameSad = "sad"
     var soundNameHappy = "happy"
     var emailG = "davisgon@gmail.com"
+    var userEmail_Home = ""
+   
 
     @IBOutlet weak var micro: UIButton!
  
@@ -27,8 +29,8 @@ class TnksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        emailG = userEmail_Home
+        print("Email     Score", emailG)
         // Do any additional setup after loading the view.
     }
     // MARK: - IBOUTLET
@@ -205,7 +207,7 @@ class TnksViewController: UIViewController {
   //  var userEmail_Home = ""
     func getOneDataUser() {
         let pMail = "userEmailText.text!"
-        let d =  CoreDataManage.inst.getOneDataUser(n: "davisgon@gmail.com")
+        let d =  CoreDataManage.inst.getOneDataUser(n: emailG)
       
         print("GetOneDataUser from USER ", d.email," Pass ", d.password, "Date Created ", d.dateCreated)
         
@@ -214,8 +216,8 @@ class TnksViewController: UIViewController {
  
     func addDataUserScore(p : Int32){
         let date = Date()
-        CoreDataManage.inst.addDataUserUserScore(emailP: "davisgon@gmail.com", scoreP: Int(p), dateCreated: date  )
-        print("Data Saved into USER-SCORE Entity")
+        CoreDataManage.inst.addDataUserUserScore(emailP: emailG, scoreP: Int(p), dateCreated: date  )
+        print("Data Saved into USER-SCORE Entity",userEmail_Home)
     }
     
     func getOneDataUserScore(p : String) {
@@ -245,6 +247,13 @@ class TnksViewController: UIViewController {
         }
         print(numRatingTotal, "Total Bad:",bad," Total Good: ",good)
         
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let svc = segue.destination as!  GiftsViewController
+            svc.userEmail_Home = userEmail_Home
         
     }
 

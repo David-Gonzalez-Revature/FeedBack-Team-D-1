@@ -73,20 +73,10 @@ class WellcomeViewController: UIViewController {
    // }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare")
+            let svc = segue.destination as!  TnksViewController
+            svc.userEmail_Home = userEmail_Home
         
-//        let svc = segue.destination as!  TnksViewController
-//        
-//        
-//           if segue.identifier == "tnks-segue" {
-//             
-//               if let destinationViewController = segue.destination as? TnksViewController {
-//                   
-//                   print("Funciona")
-//                  // destinationViewController.showAlert = acceptedRide
-//               }
-//           }
-       }
+    }
    
 
 }

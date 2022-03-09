@@ -19,10 +19,12 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // MARK: - VARS
     var gifts    = ["Hotel", "Food", "Amazone","Gas"]
+    var userEmail_Home = ""
+    var mailConected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mailConected = userEmail_Home
         // Do any additional setup after loading the view.
     }
     
@@ -52,6 +54,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var bad  = 0
         let  numRatingTotal  = CoreDataManage.inst.getDataUserScore().count
         for d in data{
+            if d.email == mailConected {
             if d.score == 100{
                // var numRating = CoreDataManage.inst.getDataUserScore().count
                 good += 1
@@ -59,8 +62,10 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
              //   var numRating = CoreDataManage.inst.getDataUserScore().count
                 bad += 1
             }
+                }
            // print("Email is ","davisgon@gmail.com","Score ", d.score, "DateCreated USER SCORE ",d.dateCreated)
         }
+        print("User Connected",mailConected)
         print(numRatingTotal, "Total Bad:",bad," Total Good: ",good)
         goodR.text = String(good)
         badR.text = String(bad)
