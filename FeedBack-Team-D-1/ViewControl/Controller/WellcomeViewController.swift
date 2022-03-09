@@ -9,6 +9,8 @@ import UIKit
 
 class WellcomeViewController: UIViewController {
     @IBOutlet weak var userEmail: UILabel!
+    var surveyChecked = true
+    var thanksChecked = false
     
     
    // @IBOutlet weak var goToServiceButton22: UIButton!
@@ -63,7 +65,19 @@ class WellcomeViewController: UIViewController {
          print("View Data")
      }
     
+    @IBAction func services(_ sender: Any) {
+        surveyChecked = true
+        thanksChecked = false
+        print(surveyChecked)
+        print(thanksChecked)
+    }
     
+    @IBAction func thanks(_ sender: Any) {
+        surveyChecked = false
+        thanksChecked = true
+        print(surveyChecked)
+        print(thanksChecked)
+    }
     // MARK: - Prepare Send Data
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let svc = segue.destination as!  GiftsViewController
@@ -73,8 +87,12 @@ class WellcomeViewController: UIViewController {
    // }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            let svc = segue.destination as!  TnksViewController
-//            svc.userEmail_Home = userEmail_Home
+        print(thanksChecked)
+        print(surveyChecked)
+        if(thanksChecked == true && surveyChecked == false){
+            let svc = segue.destination as!  TnksViewController
+             svc.userEmail_Home = userEmail_Home
+        }
         
     }
    
