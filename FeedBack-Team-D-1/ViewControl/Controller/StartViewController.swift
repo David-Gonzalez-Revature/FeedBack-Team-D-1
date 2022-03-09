@@ -13,6 +13,8 @@ class StartViewController: UIViewController {
     @IBOutlet weak var showP: UIButton!
     @IBOutlet weak var userEmailText: UITextField!
     @IBOutlet weak var userPasswordText: UITextField!
+    @IBOutlet weak var loginB: UIButton!
+    @IBOutlet weak var signUpB: UIButton!
     var loginChecked = false
     var signupChecked = true
     var email = ""
@@ -20,6 +22,8 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setupUI()
+        loginB.layer.cornerRadius = 20
+        signUpB.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
         userEmailText.text = email
         userPasswordText.text = password
