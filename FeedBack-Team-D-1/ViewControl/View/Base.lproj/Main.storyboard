@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="myA-em-IgW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQI-Ys-X9d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -434,7 +434,8 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="C0p-Jg-HMm" kind="show" id="3tk-YL-xAR"/>
+                                    <action selector="services:" destination="UQI-Ys-X9d" eventType="touchUpInside" id="fch-QG-k63"/>
+                                    <segue destination="C0p-Jg-HMm" kind="show" id="rwU-jg-t5i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhc-xY-tLq">
@@ -444,7 +445,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Thanks"/>
                                 <connections>
-                                    <segue destination="yKc-cd-DQo" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="WVo-uP-hYW"/>
+                                    <action selector="thanks:" destination="UQI-Ys-X9d" eventType="touchUpInside" id="kpU-63-cX2"/>
+                                    <segue destination="yKc-cd-DQo" kind="presentation" id="DW8-Y4-rGN"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="h2" translatesAutoresizingMaskIntoConstraints="NO" id="i4o-gX-QGn">
