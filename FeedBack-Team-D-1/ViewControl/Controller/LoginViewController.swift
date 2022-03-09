@@ -30,19 +30,10 @@ class LoginViewController: UIViewController {
     }
 
     // to do : integrate coredata for this viewcontroller
+   
+    
     @IBAction func signup(_ sender: Any) {
-        //prepare/set attribute
-        let att : [String : Any] = [kSecClass as String: kSecClassGenericPassword, kSecAttrAccount as String : id.text, kSecValueData as String : pass.text!.data(using: .utf8)!]
-        
-        //add data
-        if(SecItemAdd(att as CFDictionary, nil) == noErr){
-            print("data saved")
-        } else{
-            print("not saved")
-        }
     }
-    
-    
     @IBAction func goToFacebook(_ sender: Any) {
         UIApplication.shared.open(URL(string : "http://facebook.com")! as URL, options: [:] , completionHandler: nil)
     }
