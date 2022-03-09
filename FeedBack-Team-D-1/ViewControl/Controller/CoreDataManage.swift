@@ -211,7 +211,7 @@ class CoreDataManage{
     }
     
     func getOneData(tR : String) -> UserSurveyServices{
-        
+        //
         var surv = UserSurveyServices()
         var fReq = NSFetchRequest<NSFetchRequestResult> (entityName: "UserSurveyServices")
         fReq.predicate = NSPredicate(format: "Total Room Survey == %@", tR)
