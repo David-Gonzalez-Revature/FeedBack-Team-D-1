@@ -148,7 +148,7 @@ class SplashscreenAnimationViewController: UIViewController {
         }
          */
         startAnimate()
-        startSpeechRec()
+        //startSpeechRec()
         // Do any additional setup after loading the view.
     }
 }

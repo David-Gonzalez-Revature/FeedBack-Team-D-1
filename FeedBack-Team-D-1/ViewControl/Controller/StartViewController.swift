@@ -137,6 +137,16 @@ class StartViewController: UIViewController {
         print(loginChecked)
         print(signupChecked)
         print("--------")
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "signUp") as? SignUp else {
+            print("Couldn't find view controller")
+            return
+        }
+        
+        present(destinationViewController, animated: true, completion: nil)
+        
+        //navigationController?.pushViewController(destinationViewController, animated: true)
+        print("after nav")
     }
     @IBAction func login(_ sender: Any) {
         //viewData((Any).self)
