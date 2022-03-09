@@ -242,6 +242,24 @@
                                     <action selector="viewData:" destination="qCx-yL-8ng" eventType="touchUpInside" id="HdE-9y-aUx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-SB-HGq">
+                                <rect key="frame" x="250" y="576" width="69" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Twitter"/>
+                                <connections>
+                                    <action selector="goToTwitter:" destination="qCx-yL-8ng" eventType="touchUpInside" id="mgi-DL-88x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rl-RD-RVH">
+                                <rect key="frame" x="87" y="576" width="87" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Facebook"/>
+                                <connections>
+                                    <action selector="goToFacebook:" destination="qCx-yL-8ng" eventType="touchUpInside" id="3GC-St-F5t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dkT-8H-9Qr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -433,7 +451,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.67290489929999997" green="0.87967567280000003" blue="0.39438727439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="tnks"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Thanks"/>
                                 <connections>
                                     <segue destination="yKc-cd-DQo" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="WVo-uP-hYW"/>
                                 </connections>
