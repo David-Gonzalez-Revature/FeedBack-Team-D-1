@@ -159,8 +159,10 @@ class CoreDataManage{
         return stu
     }
     
-    // MARK: -- Get data from UserSurveyServices
-    func getDataUserSurveyServices() -> [UserSurveyServices]{
+    // MARK: -- Get data from UserSurveyServices  --- Stephanie
+    func getDataSurvey(){
+        
+           
         var surv = [UserSurveyServices]()
         let fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "UserScoreServices")
         
@@ -169,12 +171,18 @@ class CoreDataManage{
         }catch{
             print("Can not fetch any data from User Survey Services Entity")
         }
-        return surv
+//        return surv
     }
    
     // MARK: - MANAGE USER-SCORE DATA
-    func addDataRoomSurvey(id: Int, totalRoom: Int, totalScore: Int){
+    func addDataSurvey(id: Int32, tR: Int32, tF : Int32, tG : Int32, tS: Int32, typeSer : String){
         let surv = NSEntityDescription.insertNewObject(forEntityName: "UserSurveyServices", into: context!) as! UserSurveyServices
+        
+        surv.id = id
+        surv.totalFood = tF
+        surv.totalRoom = tR
+        surv.totalGym = tG
+        surv.typeService = typeSer
         
         do {
             try context?.save()
@@ -184,18 +192,43 @@ class CoreDataManage{
         }
 
         print( " Data saved in DATA-USER-SURVEY Entity")
+
     }
     
+    
     func getData () ->[UserSurveyServices]{ //returning data in form of array
-        
+
         var surv = [UserSurveyServices]()
         var fReq = NSFetchRequest<NSFetchRequestResult> (entityName: "UserSurveyServices")
-        
+
         do{
             surv = try context?.fetch(fReq) as! [UserSurveyServices]
         }
         catch {
             print("cannot fetch any data")
+        }
+        return surv
+    }
+    
+    func getOneData(tR : String) -> UserSurveyServices{
+        
+        var surv = UserSurveyServices()
+        var fReq = NSFetchRequest<NSFetchRequestResult> (entityName: "UserSurveyServices")
+        fReq.predicate = NSPredicate(format: "Total Room Survey == %@", tR)
+        fReq.fetchLimit = 1
+        
+        //
+        do{
+            let req = try context?.fetch(fReq) as! [UserSurveyServices]
+            if(req.count != 0){
+            }
+            else{
+                print("data not found")
+            }
+            
+        }
+        catch {
+            
         }
         return surv
     }

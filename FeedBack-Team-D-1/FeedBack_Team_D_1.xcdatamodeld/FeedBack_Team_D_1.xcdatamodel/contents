@@ -4,6 +4,7 @@
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="RoomTotals" representedClassName="RoomTotals" syncable="YES" codeGenerationType="class"/>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -37,5 +38,6 @@
         <element name="UserScore" positionX="-470.19140625" positionY="-157.43359375" width="128" height="89"/>
         <element name="UserScoreGifts" positionX="-415.47265625" positionY="48.3359375" width="128" height="88"/>
         <element name="UserSurveyServices" positionX="-190.04296875" positionY="-92.16015625" width="128" height="134"/>
+        <element name="RoomTotals" positionX="-333" positionY="-171" width="128" height="29"/>
     </elements>
 </model>

@@ -173,13 +173,13 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var addQ = 0
     var id = 1
     
-    class RoomSurvey{
-        let roomTotal : Int! = nil
-        public func getScore(roomTotal : Int, addQ : Int) -> Int{
-           
-            return roomTotal
-        }
-    }
+//    class RoomSurvey{
+//        let roomTotal : Int! = nil
+//        public func getScore(roomTotal : Int, addQ : Int) -> Int{
+//
+//            return roomTotal
+//        }
+//    }
     
     func updateRoomTotal(roomTotal : Int, indexpath: IndexPath){
         for i in 0...valueAnswers[roomQ.count]{
@@ -308,9 +308,8 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let data = CoreDataManage.inst.getData()
         for d in data{
             print("id is ", d.id ,
-                  "Question Score is " , d.roomTotal, " Total Room Score is: " d.totalScore)
+                  "Question Score is " , d.totalRoom, " Total Room Score is: ", d.totalScore)
         }
-        
     }
     
     
