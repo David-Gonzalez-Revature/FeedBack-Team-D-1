@@ -155,6 +155,14 @@ class StartViewController: UIViewController {
         print(signupChecked)
         print("--------")
     }
+    @IBAction func goToFacebook(_ sender: Any) {
+        UIApplication.shared.open(URL(string : "http://facebook.com")! as URL, options: [:] , completionHandler: nil)
+    }
+    
+   
+    @IBAction func goToTwitter(_ sender: Any) {
+        UIApplication.shared.open(URL(string : "http://twitter.com")! as URL, options: [:] , completionHandler: nil)
+    }
     @IBAction func ViewData() {
         // Set query
         let q : [String : Any] = [ kSecClass  as String : kSecClassGenericPassword,
