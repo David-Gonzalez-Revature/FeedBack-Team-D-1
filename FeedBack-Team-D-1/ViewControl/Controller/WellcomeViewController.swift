@@ -73,8 +73,8 @@ class WellcomeViewController: UIViewController {
    // }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let svc = segue.destination as!  TnksViewController
-            svc.userEmail_Home = userEmail_Home
+//            let svc = segue.destination as!  TnksViewController
+//            svc.userEmail_Home = userEmail_Home
         
     }
    

@@ -298,18 +298,18 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     @IBAction func saveRoomButton(_ sender: Any) {
-        CoreDataManage.inst.addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
+//        CoreDataManage.inst.addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
         print("data saved")
         
     }
     
     @IBAction func viewRoomButton(_ sender: Any) {
         
-        let data = CoreDataManage.inst.getData()
-        for d in data{
-            print("id is ", d.id ,
-                  "Question Score is " , d.totalRoom, " Total Room Score is: ", d.totalScore)
-        }
+//        let data = CoreDataManage.inst.getData()
+//        for d in data{
+//            print("id is ", d.id ,
+//                  "Question Score is " , d.totalRoom, " Total Room Score is: ", d.totalScore)
+//        }
     }
     
     

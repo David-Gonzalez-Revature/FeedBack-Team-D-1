@@ -29,7 +29,7 @@ class TnksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailG = userEmail_Home
+        emailG = "david@gmail.com"
         print("Email     Score", emailG)
         // Do any additional setup after loading the view.
     }
