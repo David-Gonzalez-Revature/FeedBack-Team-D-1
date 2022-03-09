@@ -197,109 +197,167 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section{
         case 0:
-        
                 if indexPath.item == 0{
-                    m.selectedScore = 0
-                    m.selectedScore = valueAnswers[0]
-                    print("Room Q1. Excellent")
-                    m.selectedScore += valueAnswers[0]
-                    print(m.selectedScore)
+                    if m.selectedScore != 0{
+                        m.selectedScore = 0
+                    }
+                    else{
+                        m.selectedScore = valueAnswers[0]
+                        print("Room Q1. Excellent")
+                        print(m.selectedScore)
+                    }
                 }
                 else if indexPath.item == 1{
-                    m.selectedScore = 0
-                    m.selectedScore = valueAnswers[0]
-                    print("Room Q1. Excellent")
-                    m.selectedScore += valueAnswers[0]
-                    print(roomTotal)
+                    if m.selectedScore != 0{
+                        
+                        m.selectedScore = 0
+                    }
+                    else{
+                    m.selectedScore = valueAnswers[1]
+                    print("Room Q1. Medium")
+                    print(m.selectedScore)
+                    }
                 }
                 else {
+                    if m.selectedScore != 0{
+                        
+                        m.selectedScore = 0
+                    }
+                    else{
                     m.selectedScore = 0
-                    m.selectedScore = valueAnswers[0]
-                    print("Room Q1. Excellent")
-                    m.selectedScore += valueAnswers[0]
-                    print(roomTotal)
+                    m.selectedScore = valueAnswers[2]
+                    print("Room Q1. Poor")
+                    print(m.selectedScore)
+                    }
                 }
-
-            
+        
         case 1:
             if indexPath.item == 0{
-                roomTotal = 0
+                if m.selectedScore != 0{
+                    m.selectedScore = 0
+                }
+                else{
                 m.selectedScore = valueAnswers[0]
                 print("Room Q2. Excellent")
                 roomTotal += valueAnswers[0]
-                print(roomTotal)
+                    print(m.selectedScore)
+                }
             }
             else if indexPath.item == 1{
-                roomTotal = 0
-                m.selectedScore = valueAnswers[0]
+                if m.selectedScore != 0{
+                    m.selectedScore = 0
+                }
+                else{
+                m.selectedScore = valueAnswers[1]
                 print("Room Q2. Medium")
                 roomTotal += valueAnswers[1]
-                print(roomTotal)
+                    print(m.selectedScore)
+                }
             }
             else {
-                roomTotal = 0
-                print("Room Q2. Sad")
-                m.selectedScore = valueAnswers[0]
+                if m.selectedScore != 0{
+                    m.selectedScore = 0
+                }
+                else{
+                print("Room Q2. Poor")
+                m.selectedScore = valueAnswers[2]
                 roomTotal += valueAnswers[2]
-                print(roomTotal)
+                    print(m.selectedScore)
+                }
             }
             
         case 2:
         if indexPath.item == 0{
-            roomTotal = 0
+            if m.selectedScore != 0{
+                m.selectedScore = 0
+            }
+            else{
             print("Room Q3. Excellent")
             roomTotal += valueAnswers[0]
-            print(roomTotal)
+                print(m.selectedScore)
+            }
         }
         else if indexPath.item == 1{
-            roomTotal = 0
+            if m.selectedScore != 0{
+                m.selectedScore = 0
+            }
+            else{
             print("Room Q3. Medium")
             roomTotal += valueAnswers[1]
-            print(roomTotal)
+                print(m.selectedScore)
+            }
         }
         else {
-            roomTotal = 0
-            print("Room Q3. Sad")
+            if m.selectedScore != 0{
+                m.selectedScore = 0
+            }
+            else{
+            print("Room Q3. Poor")
             roomTotal += valueAnswers[2]
-            print(roomTotal)
+                print(m.selectedScore)
+            }
         }
         case 3:
         if indexPath.item == 0{
-            roomTotal = 0
+            if m.selectedScore != 0{
+                m.selectedScore = 0
+            }
+            else{
             print("Room Q1. Excellent")
             roomTotal += valueAnswers[0]
-            print(roomTotal)
+                print(m.selectedScore)
+            }
         }
         else if indexPath.item == 1{
-            roomTotal = 0
+            if m.selectedScore != 0{
+                m.selectedScore = 0
+            }
+            else{
             print("Room Q1. Medium")
             roomTotal += valueAnswers[1]
-            print(roomTotal)
+                print(m.selectedScore)
+            }
         }
         else {
-            roomTotal = 0
-            print("Room Q1. Sad")
+            if m.selectedScore != 0{
+                m.selectedScore = 0
+            }
+            else{
+            print("Room Q1. Poor")
             roomTotal += valueAnswers[2]
-            print(roomTotal)
+                print(m.selectedScore)
+            }
         }
         case 4:
             if indexPath.item == 0{
-                roomTotal = 0
+                if m.selectedScore != 0{
+                    m.selectedScore = 0
+                }
+                else{
                 print("Room Q1. Excellent")
                 roomTotal += valueAnswers[0]
-                print(roomTotal)
+                    print(m.selectedScore)
+                }
             }
             else if indexPath.item == 1{
-                roomTotal = 0
+                if m.selectedScore != 0{
+                    m.selectedScore = 0
+                }
+                else{
                 print("Room Q1. Medium")
                 roomTotal += valueAnswers[1]
-                print(roomTotal)
+                    print(m.selectedScore)
+                }
             }
             else {
-                roomTotal = 0
-                print("Room Q1. Sad")
+                if m.selectedScore != 0{
+                    m.selectedScore = 0
+                }
+                else{
+                print("Room Q1. Poor")
                 roomTotal += valueAnswers[2]
-                print(roomTotal)
+                    print(m.selectedScore)
+                }
             }
         default :
             print("")
