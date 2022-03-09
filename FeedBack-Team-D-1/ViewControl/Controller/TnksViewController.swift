@@ -282,11 +282,11 @@ class TnksViewController: UIViewController {
         if(homeChecked == true && giftChecked == false){
             let svc = segue.destination as!  GiftsViewController
             svc.userEmail_Home = userEmail_Home
-        }else{
+        }/*else{
             print("Go to the Login")
             // let svc = segue.destination as!  StartViewController
          //   svc.userEmail_Home = userEmail_Home
-        }
+        }*/
         
     }
    
