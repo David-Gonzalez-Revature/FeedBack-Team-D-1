@@ -40,6 +40,7 @@
 		2D2D0C8627D731C400536EB0 /* DBAuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D0C8527D731C400536EB0 /* DBAuthorizationHelper.swift */; };
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
+		2DD6EE6127D878A6009DCD28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6EE6027D878A6009DCD28 /* HomeViewController.swift */; };
 		2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */; };
 		908E96FF27D643B100C9125D /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */; };
 		90BBC14627D77E3D00E8CE93 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBC14527D77E3D00E8CE93 /* GymViewController.swift */; };
@@ -82,6 +83,7 @@
 		2D2D0C8527D731C400536EB0 /* DBAuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAuthorizationHelper.swift; sourceTree = "<group>"; };
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DD6EE6027D878A6009DCD28 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenAnimationViewController.swift; sourceTree = "<group>"; };
 		908E96FE27D643B100C9125D /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
 		90BBC14527D77E3D00E8CE93 /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */,
+				2DD6EE6027D878A6009DCD28 /* HomeViewController.swift */,
 				2D863E4527D0783B00D8FCCE /* LoginViewController.swift */,
 				22F4B5A127CCE9F9004284AB /* StartViewController.swift */,
 				22CEC9B827D41A96002AB800 /* GiftsViewController.swift */,
@@ -305,6 +308,7 @@
 				2D2D0C8327D731A600536EB0 /* Authorization+CoreDataClass.swift in Sources */,
 				226327D327D384C80078BF5B /* User+CoreDataProperties.swift in Sources */,
 				226327DB27D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */,
+				2DD6EE6127D878A6009DCD28 /* HomeViewController.swift in Sources */,
 				226327D027D384C80078BF5B /* UserSurveyServices+CoreDataClass.swift in Sources */,
 				90BBC14627D77E3D00E8CE93 /* GymViewController.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
