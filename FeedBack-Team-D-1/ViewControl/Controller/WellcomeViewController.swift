@@ -65,9 +65,17 @@ class WellcomeViewController: UIViewController {
          print("View Data")
      }
     
+    //added navigation to new view controller function
     @IBAction func services(_ sender: Any) {
         surveyChecked = true
         thanksChecked = false
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "surveyTab") as? SurveyTabViewController else {
+            print("Couldn't find view controller")
+            return
+        }
+        
+        present(destinationViewController, animated: true, completion: nil)
         print(surveyChecked)
         print(thanksChecked)
     }

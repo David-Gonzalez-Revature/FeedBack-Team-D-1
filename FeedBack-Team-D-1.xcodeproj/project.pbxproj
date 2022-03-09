@@ -39,6 +39,7 @@
 		2D863E4427D073AD00D8FCCE /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D863E4327D073AD00D8FCCE /* HomePage.storyboard */; };
 		2D863E4627D0783B00D8FCCE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D863E4527D0783B00D8FCCE /* LoginViewController.swift */; };
 		2DD6EE6127D878A6009DCD28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6EE6027D878A6009DCD28 /* HomeViewController.swift */; };
+		2DD6EEA227D965B5009DCD28 /* SurveyTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6EEA127D965B5009DCD28 /* SurveyTabViewController.swift */; };
 		2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */; };
 		90164DAF27D8E27C0035DE99 /* UserSurveyServices+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90164DAD27D8E27C0035DE99 /* UserSurveyServices+CoreDataClass.swift */; };
 		90164DB027D8E27C0035DE99 /* UserSurveyServices+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90164DAE27D8E27C0035DE99 /* UserSurveyServices+CoreDataProperties.swift */; };
@@ -82,6 +83,7 @@
 		2D863E4327D073AD00D8FCCE /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		2D863E4527D0783B00D8FCCE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DD6EE6027D878A6009DCD28 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2DD6EEA127D965B5009DCD28 /* SurveyTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTabViewController.swift; sourceTree = "<group>"; };
 		2DEAAEDF27D5CECE0015E9EA /* SplashscreenAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenAnimationViewController.swift; sourceTree = "<group>"; };
 		90164DAD27D8E27C0035DE99 /* UserSurveyServices+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserSurveyServices+CoreDataClass.swift"; path = "../../UserSurveyServices+CoreDataClass.swift"; sourceTree = "<group>"; };
 		90164DAE27D8E27C0035DE99 /* UserSurveyServices+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserSurveyServices+CoreDataProperties.swift"; path = "../../UserSurveyServices+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				90BBC14727D782FC00E8CE93 /* FoodViewController.swift */,
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
+				2DD6EEA127D965B5009DCD28 /* SurveyTabViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,9 +310,9 @@
 				2D2D0C8327D731A600536EB0 /* Authorization+CoreDataClass.swift in Sources */,
 				226327D327D384C80078BF5B /* User+CoreDataProperties.swift in Sources */,
 				90164DAF27D8E27C0035DE99 /* UserSurveyServices+CoreDataClass.swift in Sources */,
+				2DD6EEA227D965B5009DCD28 /* SurveyTabViewController.swift in Sources */,
 				226327DB27D398910078BF5B /* UserScoreGifts+CoreDataProperties.swift in Sources */,
 				2DD6EE6127D878A6009DCD28 /* HomeViewController.swift in Sources */,
-				226327D027D384C80078BF5B /* UserSurveyServices+CoreDataClass.swift in Sources */,
 				90BBC14627D77E3D00E8CE93 /* GymViewController.swift in Sources */,
 				22DCFD9C27C93C160013605E /* SceneDelegate.swift in Sources */,
 				226327D427D384C80078BF5B /* UserScore+CoreDataClass.swift in Sources */,
