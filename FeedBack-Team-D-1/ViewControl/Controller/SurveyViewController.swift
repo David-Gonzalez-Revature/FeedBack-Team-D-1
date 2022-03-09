@@ -9,7 +9,9 @@ import UIKit
 
 class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var valueAnswer: UILabel!
     
+    var valueAnswers = [100,50,30]
     
     //MARK Questions data
     var imageData = ["Excellent", "Medium", "Poor"]
@@ -167,72 +169,154 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
     }
+    var roomTotal = 0
+    var addQ = 0
+    var id = 1
     
+    class RoomSurvey{
+        let roomTotal : Int! = nil
+        public func getScore(roomTotal : Int, addQ : Int) -> Int{
+           
+            return roomTotal
+        }
+    }
+    
+    func updateRoomTotal(roomTotal : Int, indexpath: IndexPath){
+        for i in 0...valueAnswers[roomQ.count]{
+            self.roomTotal += valueAnswers[i]
+        }
+        
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section{
         case 0:
-            switch indexPath.item {
-            case 0 :
+            if indexPath.item == 0{
+                roomTotal = 0
                 print("Room Q1. Excellent")
-            case 1:
+                roomTotal += valueAnswers[0]
+                print(roomTotal)
+            }
+            else if indexPath.item == 1{
+                roomTotal = 0
                 print("Room Q1. Medium")
-            case 2:
+                roomTotal += valueAnswers[1]
+                print(roomTotal)
+            }
+            else {
+                roomTotal = 0
                 print("Room Q1. Sad")
-            default:
-                print("wrong choice")
+                roomTotal += valueAnswers[2]
+                print(roomTotal)
             }
             
         case 1:
-            switch indexPath.item {
-            case 0 :
+            if indexPath.item == 0{
+                roomTotal = 0
                 print("Room Q2. Excellent")
-            case 1:
+                roomTotal += valueAnswers[0]
+                print(roomTotal)
+            }
+            else if indexPath.item == 1{
+                roomTotal = 0
                 print("Room Q2. Medium")
-            case 2:
+                roomTotal += valueAnswers[1]
+                print(roomTotal)
+            }
+            else {
+                roomTotal = 0
                 print("Room Q2. Sad")
-            default:
-                print("wrong choice")
+                roomTotal += valueAnswers[2]
+                print(roomTotal)
             }
+            
         case 2:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q3. Excellent")
-            case 1:
-                print("Room Q3. Medium")
-            case 2:
-                print("Room Q3. Sad")
-            default:
-                print("wrong choice")
-            }
+        if indexPath.item == 0{
+            roomTotal = 0
+            print("Room Q3. Excellent")
+            roomTotal += valueAnswers[0]
+            print(roomTotal)
+        }
+        else if indexPath.item == 1{
+            roomTotal = 0
+            print("Room Q3. Medium")
+            roomTotal += valueAnswers[1]
+            print(roomTotal)
+        }
+        else {
+            roomTotal = 0
+            print("Room Q3. Sad")
+            roomTotal += valueAnswers[2]
+            print(roomTotal)
+        }
         case 3:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q4. Excellent")
-            case 1:
-                print("Room Q4. Medium")
-            case 2:
-                print("Room Q4. Sad")
-            default:
-                print("wrong choice")
-            }
+        if indexPath.item == 0{
+            roomTotal = 0
+            print("Room Q1. Excellent")
+            roomTotal += valueAnswers[0]
+            print(roomTotal)
+        }
+        else if indexPath.item == 1{
+            roomTotal = 0
+            print("Room Q1. Medium")
+            roomTotal += valueAnswers[1]
+            print(roomTotal)
+        }
+        else {
+            roomTotal = 0
+            print("Room Q1. Sad")
+            roomTotal += valueAnswers[2]
+            print(roomTotal)
+        }
         case 4:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q5. Excellent")
-            case 1:
-                print("Room Q5. Medium")
-            case 2:
-                print("Room Q5. Sad")
-            default:
-                print("wrong choice")
+            if indexPath.item == 0{
+                roomTotal = 0
+                print("Room Q1. Excellent")
+                roomTotal += valueAnswers[0]
+                print(roomTotal)
+            }
+            else if indexPath.item == 1{
+                roomTotal = 0
+                print("Room Q1. Medium")
+                roomTotal += valueAnswers[1]
+                print(roomTotal)
+            }
+            else {
+                roomTotal = 0
+                print("Room Q1. Sad")
+                roomTotal += valueAnswers[2]
+                print(roomTotal)
             }
         default :
             print("")
         }
         
+        
+        //MARK: SAVE BUTTON
+        
+        
+        
     }
 
-
+    @IBAction func saveRoomButton(_ sender: Any) {
+        CoreDataManage.inst.addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
+        print("data saved")
+        
+    }
+    
+    @IBAction func viewRoomButton(_ sender: Any) {
+        
+        let data = CoreDataManage.inst.getData()
+        for d in data{
+            print("id is ", d.id ,
+                  "Question Score is " , d.roomTotal, " Total Room Score is: " d.totalScore)
+        }
+        
+    }
+    
+    
+    
+    
+    
 //    saImage.isHidden = false
 //    HappyImage.isHidden = true
     

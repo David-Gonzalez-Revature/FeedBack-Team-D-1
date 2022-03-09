@@ -16,4 +16,7 @@ class SurveyTableViewCell: UITableViewCell {
     @IBOutlet weak var exImg: UIImageView!
     @IBOutlet weak var medImg: UIImageView!
     @IBOutlet weak var sadImg: UIImageView!
+    
+    @IBOutlet weak var valueAnswer: UILabel!
+    
 }

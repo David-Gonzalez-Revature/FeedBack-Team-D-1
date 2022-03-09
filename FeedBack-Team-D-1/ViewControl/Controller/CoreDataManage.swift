@@ -103,6 +103,10 @@ class CoreDataManage{
 //
 //        }
 //    }
+    
+    // MARK: - MANAGE SURVEY SCORE DATA
+
+    
     // MARK: - MANAGE USER-SCORE DATA
     func addDataUserUserScore(emailP: String, scoreP: Int, dateCreated: Date){
         let stu = NSEntityDescription.insertNewObject(forEntityName: "UserScore", into: context!) as! UserScore
@@ -154,5 +158,46 @@ class CoreDataManage{
         }
         return stu
     }
-}
+    
+    // MARK: -- Get data from UserSurveyServices
+    func getDataUserSurveyServices() -> [UserSurveyServices]{
+        var surv = [UserSurveyServices]()
+        let fReq = NSFetchRequest<NSFetchRequestResult>(entityName: "UserScoreServices")
+        
+        do{
+            surv = try context?.fetch(fReq) as! [UserSurveyServices]
+        }catch{
+            print("Can not fetch any data from User Survey Services Entity")
+        }
+        return surv
+    }
+   
+    // MARK: - MANAGE USER-SCORE DATA
+    func addDataRoomSurvey(id: Int, totalRoom: Int, totalScore: Int){
+        let surv = NSEntityDescription.insertNewObject(forEntityName: "UserSurveyServices", into: context!) as! UserSurveyServices
+        
+        do {
+            try context?.save()
+        }
+        catch{
+            print("Room Survey data not saved")
+        }
 
+        print( " Data saved in DATA-USER-SURVEY Entity")
+    }
+    
+    func getData () ->[UserSurveyServices]{ //returning data in form of array
+        
+        var surv = [UserSurveyServices]()
+        var fReq = NSFetchRequest<NSFetchRequestResult> (entityName: "UserSurveyServices")
+        
+        do{
+            surv = try context?.fetch(fReq) as! [UserSurveyServices]
+        }
+        catch {
+            print("cannot fetch any data")
+        }
+        return surv
+    }
+    
+}
