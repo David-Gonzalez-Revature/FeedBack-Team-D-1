@@ -88,6 +88,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func itemSelected(_ sender: Any) {
         endMesagge.isHidden = false
+        selectButton.isEnabled = false
     }
     
 }

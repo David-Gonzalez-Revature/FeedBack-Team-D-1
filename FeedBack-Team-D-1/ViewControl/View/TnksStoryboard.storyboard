@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xp0-KQ-CqG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xp0-KQ-CqG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -131,6 +131,20 @@ press a button and tell us what you think.</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-v7-jcD">
+                                <rect key="frame" x="152" y="328" width="119" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="mic.fill" catalog="system" title="Button">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="activeMicro:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wlm-P1-P1T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -144,6 +158,7 @@ press a button and tell us what you think.</string>
                         <outlet property="giftsButton" destination="lvo-85-Aup" id="MKN-86-ppQ"/>
                         <outlet property="happyImage" destination="WfN-lN-d9r" id="YYB-Ad-2b4"/>
                         <outlet property="label" destination="fQb-xq-rxW" id="kIE-MW-zvh"/>
+                        <outlet property="micro" destination="hxk-v7-jcD" id="xzE-YZ-GkA"/>
                         <outlet property="sadImage" destination="smp-Pl-fyS" id="iFE-ky-rea"/>
                     </connections>
                 </viewController>
@@ -341,12 +356,13 @@ press a button and tell us what you think.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7BJ-2j-TPC"/>
+        <segue reference="JHU-ks-C6j"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="happy" width="1386" height="1008"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="logoCityEscapeF" width="452" height="253"/>
+        <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="qr" width="483" height="487"/>
         <image name="sadIcon" width="300" height="300"/>
         <image name="star" catalog="system" width="32" height="32"/>

@@ -16,15 +16,18 @@ class TnksViewController: UIViewController {
     var soundNameSad = "sad"
     var soundNameHappy = "happy"
     var emailG = "davisgon@gmail.com"
-    
+
+    @IBOutlet weak var micro: UIButton!
+ 
     let audioEng = AVAudioEngine()
     let req = SFSpeechAudioBufferRecognitionRequest()
     let speechR = SFSpeechRecognizer()
     var rTask : SFSpeechRecognitionTask!
+    var isStart = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startSpeechRec()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -54,7 +57,7 @@ class TnksViewController: UIViewController {
         addDataUserScore(p : 100)
         getDataUserScore()
         getOneDataUserScore( p : emailG)
-        cancellSpeechRec()
+       
     }
     
     @IBAction func S5Selected(_ sender: Any) {
@@ -98,7 +101,24 @@ class TnksViewController: UIViewController {
         //getOneDataUserScore()
         getDataUserScore()
     }
-    
+    // ************
+    // Active Micro
+    // ************
+    @IBAction func activeMicro(_ sender: Any) {
+        isStart = !isStart
+        if isStart {
+            startSpeechRec()
+            micro.setTitle("stop", for: .normal)
+            micro.tintColor = .blue
+            
+         //   sender.setTitle("stop", for: .normal)
+        }else{
+            cancellSpeechRec()
+            micro.setTitle("start", for: .normal)
+            micro.tintColor = .red
+          //  sender.setTitle("start", for: .normal)
+        }
+    }
     
     
     // ******************************     FUNC
