@@ -12,6 +12,8 @@ import Speech
 class TnksViewController: UIViewController {
     // MARK: - VARS
     var audioPlayer: AVAudioPlayer!
+    var giftChecked = true
+    var homeChecked = false
  //   var audioPlayer : AVAudioPlayer!
     var soundNameSad = "sad"
     var soundNameHappy = "happy"
@@ -47,6 +49,22 @@ class TnksViewController: UIViewController {
     
       
     // MARK: - IBACTION
+    
+    
+    
+    @IBAction func homeB(_ sender: Any) {
+        
+        var giftsChecked = true
+        var homeChecked = false
+    }
+    
+    
+    @IBAction func giftsB(_ sender: Any) {
+        var giftsChecked = false
+        var homeChecked = true
+    }
+    
+    
     @IBAction func S5_Happy(_ sender: Any) {
         sadImage.isHidden = true
         happyImage.isHidden = false
@@ -167,6 +185,8 @@ class TnksViewController: UIViewController {
                 self.giftsButton.isEnabled = true
             case "good":
                 self.giftsButton.isEnabled = true
+            case "Good":
+                self.giftsButton.isEnabled = true
             case "abracadabra":
                 self.giftsButton.isEnabled = true
             default :
@@ -255,10 +275,21 @@ class TnksViewController: UIViewController {
     }
     
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(homeChecked)
+        print(giftChecked)
+        if(homeChecked == true && giftChecked == false){
             let svc = segue.destination as!  GiftsViewController
             svc.userEmail_Home = userEmail_Home
+        }/*else{
+            print("Go to the Login")
+            // let svc = segue.destination as!  StartViewController
+         //   svc.userEmail_Home = userEmail_Home
+        }*/
         
     }
+   
+
 
 }

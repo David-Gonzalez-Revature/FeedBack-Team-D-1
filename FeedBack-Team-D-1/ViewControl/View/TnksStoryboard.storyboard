@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -72,6 +72,7 @@
                                     <color key="baseBackgroundColor" red="0.98414963479999995" green="0.79190868140000004" blue="0.036851599810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="giftsB:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uIo-96-d7Z"/>
                                     <action selector="recuperaData:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0mP-Zy-YbE"/>
                                     <segue destination="isX-tt-s4D" kind="show" id="Nrs-Qb-BMm"/>
                                 </connections>
@@ -100,7 +101,7 @@
                                     <action selector="S1Selected:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4KS-Qm-Si2"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3A-Ah-77N">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3A-Ah-77N">
                                 <rect key="frame" x="341" y="99" width="53" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.98414963483810425" green="0.79190868139266968" blue="0.036851599812507629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,6 +110,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="homeB:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JRQ-DI-Vnu"/>
                                     <segue destination="xH3-UW-IZu" kind="presentation" modalPresentationStyle="fullScreen" id="7BJ-2j-TPC"/>
                                 </connections>
                             </button>
@@ -328,10 +330,10 @@ press a button and tell us what you think.</string>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="898.66071428571422"/>
         </scene>
-        <!--Main-->
+        <!--loginView-->
         <scene sceneID="0Hy-fN-UcS">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="xH3-UW-IZu" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="loginView" id="xH3-UW-IZu" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUG-Cj-Xip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50" y="859"/>
@@ -356,7 +358,7 @@ press a button and tell us what you think.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7BJ-2j-TPC"/>
+        <segue reference="JHU-ks-C6j"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="happy" width="1386" height="1008"/>
