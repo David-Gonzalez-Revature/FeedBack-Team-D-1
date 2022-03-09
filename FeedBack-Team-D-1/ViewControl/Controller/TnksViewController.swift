@@ -158,16 +158,20 @@ class TnksViewController: UIViewController {
                 let indexTo = msg!.index(msg!.startIndex, offsetBy: seg.substringRange.location)
                 str = String(msg![indexTo...])
             }
-            self.giftsButton.isEnabled = true
-            // *** reconigzer
-//            switch str{
-//            case "blue":
-//                self.view.backgroundColor = .blue
-//            case "yellow":
-//                self.view.backgroundColor = .yellow
-//            default :
-//                self.view.backgroundColor = .none
-//            }
+       
+             //*** reconigzer
+            switch str{
+            case "thnks":
+                self.giftsButton.isEnabled = true
+            case "thnaks":
+                self.giftsButton.isEnabled = true
+            case "good":
+                self.giftsButton.isEnabled = true
+            case "abracadabra":
+                self.giftsButton.isEnabled = true
+            default :
+                self.giftsButton.isEnabled = false
+            }
             
             
         
