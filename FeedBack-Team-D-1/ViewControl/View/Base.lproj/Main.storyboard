@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQI-Ys-X9d">
+
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -623,14 +625,25 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hv-M8-B10">
-                                        <rect key="frame" x="295" y="437" width="79" height="31"/>
+                                        <rect key="frame" x="280" y="437" width="94" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="View">
+                                        <buttonConfiguration key="configuration" style="plain" image="eye.circle" catalog="system" title=" View">
                                             <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="viewRoomButton:" destination="MBB-yb-Qye" eventType="touchUpInside" id="Osr-g2-L3T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEK-Nh-e0L">
+                                        <rect key="frame" x="280" y="398" width="94" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.left.arrow.right" catalog="system" title="Update">
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="updateRoomButton:" destination="MBB-yb-Qye" eventType="touchUpInside" id="qzD-3L-zCd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -953,10 +966,12 @@
         <image name="Excellent" width="274" height="288"/>
         <image name="Medium" width="234" height="304"/>
         <image name="Poor" width="216" height="308"/>
+        <image name="arrow.left.arrow.right" catalog="system" width="119" height="128"/>
         <image name="bed.double" catalog="system" width="128" height="82"/>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="closeeye" width="17" height="13"/>
+        <image name="eye.circle" catalog="system" width="128" height="121"/>
         <image name="facebook_logo" width="640" height="360"/>
         <image name="h2" width="312.5" height="175"/>
         <image name="heart" catalog="system" width="128" height="109"/>
