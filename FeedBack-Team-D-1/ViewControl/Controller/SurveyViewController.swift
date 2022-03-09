@@ -349,6 +349,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     print(m.selectedScore)
                 }
             }
+            
             else {
                 if m.selectedScore != 0{
                     m.selectedScore = 0
