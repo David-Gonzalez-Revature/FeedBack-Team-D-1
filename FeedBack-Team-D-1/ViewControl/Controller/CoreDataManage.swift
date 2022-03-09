@@ -175,17 +175,17 @@ class CoreDataManage{
     }
    
     // MARK: - MANAGE USER-SCORE DATA
-    func addDataSurvey(id: Int32, tR: Int32, tF : Int32, tG : Int32, tS: Int32, typeSer : String){
+    func addDataRoomSurvey(id: Int32, tR: Int32,tF: Int32, tS: Int32, typeSer : String){
         let surv = NSEntityDescription.insertNewObject(forEntityName: "UserSurveyServices", into: context!) as! UserSurveyServices
         
         surv.id = id
-        surv.totalFood = tF
         surv.totalRoom = tR
-        surv.totalGym = tG
+        surv.totalFood = tF  //for now this is for room score only
         surv.typeService = typeSer
         
         do {
             try context?.save()
+            print(" saved data")
         }
         catch{
             print("Room Survey data not saved")
@@ -231,6 +231,31 @@ class CoreDataManage{
             
         }
         return surv
+    }
+
+    func updateData(id: Int32, tR: Int32,tF: Int32, tS: Int32, typeSer : String){
+        var surv = UserSurveyServices()
+        var fReq = NSFetchRequest <NSManagedObject>.init(entityName: "UserSurveyServices")
+        fReq.predicate = NSPredicate(format: "Score is %@ ", tF )
+
+        do{
+            let surve = try context?.fetch(fReq)
+            if (surve?.count != 0){
+                surv = surve?.first as! UserSurveyServices
+
+                surv.id = id
+                surv.totalRoom = tR
+                surv.totalFood = tF  //for now this is for room score only
+                surv.typeService = typeSer
+                
+                try context?.save()
+                print("data updated")
+
+            }
+        }
+        catch{
+            
+        }
     }
     
 }

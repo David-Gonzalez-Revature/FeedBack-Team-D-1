@@ -169,9 +169,11 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
     }
+    var room = 0
     var roomTotal = 0
     var addQ = 0
     var id = 1
+    var servType = "Room"
     
 //    class RoomSurvey{
 //        let roomTotal : Int! = nil
@@ -180,44 +182,56 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //            return roomTotal
 //        }
 //    }
+    class score{
+        var selectedScore: Int! = 0
+    }
     
+    var  m = score()
+   
     func updateRoomTotal(roomTotal : Int, indexpath: IndexPath){
         for i in 0...valueAnswers[roomQ.count]{
-            self.roomTotal += valueAnswers[i]
+            m.selectedScore += valueAnswers[i]
         }
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section{
         case 0:
-            if indexPath.item == 0{
-                roomTotal = 0
-                print("Room Q1. Excellent")
-                roomTotal += valueAnswers[0]
-                print(roomTotal)
-            }
-            else if indexPath.item == 1{
-                roomTotal = 0
-                print("Room Q1. Medium")
-                roomTotal += valueAnswers[1]
-                print(roomTotal)
-            }
-            else {
-                roomTotal = 0
-                print("Room Q1. Sad")
-                roomTotal += valueAnswers[2]
-                print(roomTotal)
-            }
+        
+                if indexPath.item == 0{
+                    m.selectedScore = 0
+                    m.selectedScore = valueAnswers[0]
+                    print("Room Q1. Excellent")
+                    m.selectedScore += valueAnswers[0]
+                    print(m.selectedScore)
+                }
+                else if indexPath.item == 1{
+                    m.selectedScore = 0
+                    m.selectedScore = valueAnswers[0]
+                    print("Room Q1. Excellent")
+                    m.selectedScore += valueAnswers[0]
+                    print(roomTotal)
+                }
+                else {
+                    m.selectedScore = 0
+                    m.selectedScore = valueAnswers[0]
+                    print("Room Q1. Excellent")
+                    m.selectedScore += valueAnswers[0]
+                    print(roomTotal)
+                }
+
             
         case 1:
             if indexPath.item == 0{
                 roomTotal = 0
+                m.selectedScore = valueAnswers[0]
                 print("Room Q2. Excellent")
                 roomTotal += valueAnswers[0]
                 print(roomTotal)
             }
             else if indexPath.item == 1{
                 roomTotal = 0
+                m.selectedScore = valueAnswers[0]
                 print("Room Q2. Medium")
                 roomTotal += valueAnswers[1]
                 print(roomTotal)
@@ -225,6 +239,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
             else {
                 roomTotal = 0
                 print("Room Q2. Sad")
+                m.selectedScore = valueAnswers[0]
                 roomTotal += valueAnswers[2]
                 print(roomTotal)
             }
@@ -298,18 +313,25 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     @IBAction func saveRoomButton(_ sender: Any) {
-//        CoreDataManage.inst.addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
+        CoreDataManage.inst.addDataRoomSurvey(id: Int32(id), tR: Int32(roomTotal), tF: Int32(m.selectedScore), tS: Int32(roomTotal), typeSer: servType)
+        //addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
         print("data saved")
         
     }
     
+    
     @IBAction func viewRoomButton(_ sender: Any) {
         
-//        let data = CoreDataManage.inst.getData()
-//        for d in data{
-//            print("id is ", d.id ,
-//                  "Question Score is " , d.totalRoom, " Total Room Score is: ", d.totalScore)
-//        }
+        let data = CoreDataManage.inst.getData()
+        for d in data{
+            print("id is ", d.id , "Score for ", d.typeService,
+                  "Question Score is " , d.totalFood, " Total Room Score is: ", d.totalScore, m.selectedScore)
+        }
+    }
+    
+    @IBAction func updateRoomButton(_ sender: Any) {
+        var d = CoreDataManage.inst.updateData(id: Int32(id), tR: Int32(roomTotal), tF: Int32(m.selectedScore), tS: Int32(roomTotal), typeSer: servType)
+       
     }
     
     
