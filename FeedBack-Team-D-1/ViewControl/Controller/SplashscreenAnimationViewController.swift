@@ -97,19 +97,19 @@ class SplashscreenAnimationViewController: UIViewController {
         }catch let err {
             printContent(err)
         }
-        
+
         rTask  = speechR?.recognitionTask(with: req, resultHandler: {
             (resp, error) in
-            
+
             guard let rsp = resp else{
                 print(error.debugDescription)
-                
+
                 return
             }
             let msg = resp?.bestTranscription.formattedString
             self.label.text = msg!
-            
-            
+
+
             var str : String = ""
             for seg in  resp!.bestTranscription.segments{
                 let indexTo = msg!.index(msg!.startIndex, offsetBy: seg.substringRange.location)
@@ -128,12 +128,12 @@ class SplashscreenAnimationViewController: UIViewController {
             default :
                 self.view.backgroundColor = .none
             }
-            
-            
-        
+
+
+
         })
-        
-        
+
+
         print("start")
     }
     
@@ -163,10 +163,10 @@ class SplashscreenAnimationViewController: UIViewController {
         
         isStart = !isStart
         if isStart {
-            startSpeechRec()
+//            startSpeechRec()
             sender.setTitle("stop", for: .normal)
         }else{
-            cancellSpeechRec()
+//            cancellSpeechRec()
             sender.setTitle("start", for: .normal)
         }
                

@@ -2,7 +2,7 @@
 //  UserSurveyServices+CoreDataProperties.swift
 //  FeedBack-Team-D-1
 //
-//  Created by David Gonzalez on 3/5/22.
+//  Created by Stephanie Marin Velasquez on 3/9/22.
 //
 //
 
@@ -18,7 +18,10 @@ extension UserSurveyServices {
 
     @NSManaged public var dateCreated: Date?
     @NSManaged public var id: Int32
-    @NSManaged public var qualification: Int32
+    @NSManaged public var totalFood: Int32
+    @NSManaged public var totalGym: Int32
+    @NSManaged public var totalRoom: Int32
+    @NSManaged public var totalScore: Int32
     @NSManaged public var typeService: String?
 
 }
