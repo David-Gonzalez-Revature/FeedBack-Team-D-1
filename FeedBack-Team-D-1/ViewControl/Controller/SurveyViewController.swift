@@ -397,10 +397,10 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func viewRoomButton(_ sender: Any) {
         
-        let data = CoreDataManage.inst.getDataRoom(tR: <#T##Int32#>)
-        for d in data{
-            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalRoom )
-        }
+//        let data = CoreDataManage.inst.getDataRoom(tR: <#T##Int32#>)
+//        for d in data{
+//            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalRoom )
+//        }
     }
     
 //    @IBAction func updateRoomButton(_ sender: Any) {
