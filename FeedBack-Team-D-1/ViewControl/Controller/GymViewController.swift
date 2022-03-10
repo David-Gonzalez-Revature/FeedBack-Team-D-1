@@ -9,6 +9,14 @@ import UIKit
 
 class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var valueAnswers = [100,50,30]
+    var room = 0
+    var gymTotal = 0
+    var addQ = 0
+    var id = 2
+    var servType = "Gym"
+    var myVector = [0,0,0,0,0]
+    
     var imageData = ["Excellent", "Medium", "Poor"]
     var answer = [ "Excellent", "Medium", "Poor"]
     
@@ -166,61 +174,185 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section{
         case 0:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q1. Excellent")
-            case 1:
-                print("Room Q1. Medium")
-            case 2:
-                print("Room Q1. Sad")
-            default:
-                print("wrong choice")
-            }
+                if indexPath.item == 0{
+                    if myVector[0] != 0{
+                        myVector[0] = 0
+                    }
+                    else{
+                        myVector[0] = valueAnswers[0]
+                        print("Gym Q1. Excellent")
+                        print(myVector[0])
+                    }
+                }
+                else if indexPath.item == 1{
+                    if myVector[0] != 0{
+                        
+                        myVector[0] = 0
+                    }
+                    else{
+                        myVector[0] = valueAnswers[1]
+                    print("Gym Q1. Medium")
+                    print(myVector[0])
+                    }
+                }
+                else {
+                    if myVector[0] != 0{
+                        
+                        myVector[0] = 0
+                    }
+                    else{
+                        myVector[0] = 0
+                        myVector[0] = valueAnswers[2]
+                    print("Gym Q1. Poor")
+                    print(myVector[0])
+                    }
+                }
+            gymTotal += myVector[0]
+        print(gymTotal)
             
         case 1:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q2. Excellent")
-            case 1:
-                print("Room Q2. Medium")
-            case 2:
-                print("Room Q2. Sad")
-            default:
-                print("wrong choice")
+            if indexPath.item == 0{
+                if myVector[1] != 0{
+                    myVector[1] = 0
+                }
+                else{
+                    myVector[1] = valueAnswers[0]
+                print("Gym Q2. Excellent")
+                    myVector[1] += valueAnswers[0]
+                    print(myVector[1])
+                }
             }
+            else if indexPath.item == 1{
+                if myVector[1] != 0{
+                    myVector[1] = 0
+                }
+                else{
+                    myVector[1] = valueAnswers[1]
+                print("Gym Q2. Medium")
+                    myVector[1] += valueAnswers[1]
+                    print(myVector[1])
+                }
+            }
+            else {
+                if myVector[1] != 0{
+                    myVector[1] = 0
+                }
+                else{
+                print("Gym Q2. Poor")
+                    myVector[1] = valueAnswers[2]
+                    print(myVector[1])
+                }
+            }
+            
+            gymTotal += myVector[1]
+            print(gymTotal)
+                
         case 2:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q3. Excellent")
-            case 1:
-                print("Room Q3. Medium")
-            case 2:
-                print("Room Q3. Sad")
-            default:
-                print("wrong choice")
+        if indexPath.item == 0{
+            if myVector[1] != 0{
+                myVector[1] = 0
             }
+            else{
+            print("Gym Q3. Excellent")
+                myVector[1] += valueAnswers[0]
+                print(myVector[1])
+            }
+        }
+        else if indexPath.item == 1{
+            if myVector[1] != 0{
+                myVector[1] = 0
+            }
+            else{
+            print("Gym Q3. Medium")
+                myVector[1] += valueAnswers[1]
+                print(myVector[1])
+            }
+        }
+        else {
+            if myVector[1] != 0{
+                myVector[1] = 0
+            }
+            else{
+            print("Gym Q3. Poor")
+                myVector[1] += valueAnswers[2]
+                print(myVector[1])
+            }
+        }
+            
+            gymTotal += myVector[1]
+            print(gymTotal)
+                
         case 3:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q4. Excellent")
-            case 1:
-                print("Room Q4. Medium")
-            case 2:
-                print("Room Q4. Sad")
-            default:
-                print("wrong choice")
+        if indexPath.item == 0{
+            if myVector[2] != 0{
+                myVector[2] = 0
             }
+            else{
+            print("Gym Q4. Excellent")
+                myVector[2] += valueAnswers[0]
+                print(myVector[2])
+            }
+        }
+        else if indexPath.item == 1{
+            if myVector[2] != 0{
+                myVector[2] = 0
+            }
+            else{
+            print("Gym Q4. Medium")
+                myVector[2] += valueAnswers[1]
+                print(myVector[2])
+            }
+        }
+        else {
+            if myVector[2] != 0{
+                myVector[2] = 0
+            }
+            else{
+            print("Gym Q4. Poor")
+                myVector[2] += valueAnswers[2]
+                print(myVector[2])
+            }
+        }
+            
+            gymTotal += myVector[1]
+            print(gymTotal)
+              
         case 4:
-            switch indexPath.item {
-            case 0 :
-                print("Room Q5. Excellent")
-            case 1:
-                print("Room Q5. Medium")
-            case 2:
-                print("Room Q5. Sad")
-            default:
-                print("wrong choice")
+            if indexPath.item == 0{
+                if  myVector[4] != 0{
+                    myVector[4] = 0
+                }
+                else{
+                print("Gym Q5. Excellent")
+                    myVector[4] += valueAnswers[0]
+                    print(myVector[4])
+                }
             }
+            else if indexPath.item == 1{
+                if myVector[4] != 0{
+                    myVector[4] = 0
+                }
+                else{
+                print("Gym Q5. Medium")
+                    myVector[4] += valueAnswers[1]
+                    print(myVector[4])
+                }
+            }
+            
+            else {
+                if myVector[4] != 0{
+                    myVector[4] = 0
+                }
+                else{
+                print("Gym Q5. Poor")
+                    myVector[4] += valueAnswers[2]
+                    print(myVector[4])
+                }
+            }
+            
+            gymTotal += myVector[1]
+            print(gymTotal)
+              
         default :
             print("")
         }
