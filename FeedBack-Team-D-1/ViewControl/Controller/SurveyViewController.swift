@@ -12,6 +12,12 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var valueAnswer: UILabel!
     
     var valueAnswers = [100,50,30]
+    var room = 0
+    var foodTotal = 0
+    var addQ = 0
+    var id = 1
+    var servType = "Room"
+    var myVector = [0,0,0,0,0]
     
     //MARK Questions data
     var imageData = ["Excellent", "Medium", "Poor"]
@@ -169,11 +175,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
     }
-    var room = 0
-    var roomTotal = 0
-    var addQ = 0
-    var id = 1
-    var servType = "Room"
+
     
 //    class RoomSurvey{
 //        let roomTotal : Int! = nil
@@ -198,168 +200,184 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         switch indexPath.section{
         case 0:
                 if indexPath.item == 0{
-                    if m.selectedScore != 0{
-                        m.selectedScore = 0
+                    if myVector[0] != 0{
+                        myVector[0] = 0
                     }
                     else{
-                        m.selectedScore = valueAnswers[0]
-                        print("Room Q1. Excellent")
-                        print(m.selectedScore)
+                        myVector[0] = valueAnswers[0]
+                        print("Food Q1. Excellent")
+                        print(myVector[0])
                     }
                 }
                 else if indexPath.item == 1{
-                    if m.selectedScore != 0{
+                    if myVector[0] != 0{
                         
-                        m.selectedScore = 0
+                        myVector[0] = 0
                     }
                     else{
-                    m.selectedScore = valueAnswers[1]
-                    print("Room Q1. Medium")
-                    print(m.selectedScore)
+                        myVector[0] = valueAnswers[1]
+                    print("Food Q1. Medium")
+                    print(myVector[0])
                     }
                 }
                 else {
-                    if m.selectedScore != 0{
+                    if myVector[0] != 0{
                         
-                        m.selectedScore = 0
+                        myVector[0] = 0
                     }
                     else{
-                    m.selectedScore = 0
-                    m.selectedScore = valueAnswers[2]
-                    print("Room Q1. Poor")
-                    print(m.selectedScore)
+                        myVector[0] = 0
+                        myVector[0] = valueAnswers[2]
+                    print("Food Q1. Poor")
+                    print(myVector[0])
                     }
                 }
-        
+            foodTotal += myVector[0]
+        print(foodTotal)
+            
         case 1:
             if indexPath.item == 0{
-                if m.selectedScore != 0{
-                    m.selectedScore = 0
+                if myVector[1] != 0{
+                    myVector[1] = 0
                 }
                 else{
-                m.selectedScore = valueAnswers[0]
-                print("Room Q2. Excellent")
-                roomTotal += valueAnswers[0]
-                    print(m.selectedScore)
+                    myVector[1] = valueAnswers[0]
+                print("Food Q2. Excellent")
+                    myVector[1] += valueAnswers[0]
+                    print(myVector[1])
                 }
             }
             else if indexPath.item == 1{
-                if m.selectedScore != 0{
-                    m.selectedScore = 0
+                if myVector[1] != 0{
+                    myVector[1] = 0
                 }
                 else{
-                m.selectedScore = valueAnswers[1]
-                print("Room Q2. Medium")
-                roomTotal += valueAnswers[1]
-                    print(m.selectedScore)
+                    myVector[1] = valueAnswers[1]
+                print("Food Q2. Medium")
+                    myVector[1] += valueAnswers[1]
+                    print(myVector[1])
                 }
             }
             else {
-                if m.selectedScore != 0{
-                    m.selectedScore = 0
+                if myVector[1] != 0{
+                    myVector[1] = 0
                 }
                 else{
-                print("Room Q2. Poor")
-                m.selectedScore = valueAnswers[2]
-                roomTotal += valueAnswers[2]
-                    print(m.selectedScore)
+                print("Food Q2. Poor")
+                    myVector[1] = valueAnswers[2]
+                    print(myVector[1])
                 }
             }
             
+            foodTotal += myVector[1]
+            print(foodTotal)
+                
         case 2:
         if indexPath.item == 0{
-            if m.selectedScore != 0{
-                m.selectedScore = 0
+            if myVector[1] != 0{
+                myVector[1] = 0
             }
             else{
-            print("Room Q3. Excellent")
-            roomTotal += valueAnswers[0]
-                print(m.selectedScore)
+            print("Food Q3. Excellent")
+                myVector[1] += valueAnswers[0]
+                print(myVector[1])
             }
         }
         else if indexPath.item == 1{
-            if m.selectedScore != 0{
-                m.selectedScore = 0
+            if myVector[1] != 0{
+                myVector[1] = 0
             }
             else{
-            print("Room Q3. Medium")
-            roomTotal += valueAnswers[1]
-                print(m.selectedScore)
+            print("Food Q3. Medium")
+                myVector[1] += valueAnswers[1]
+                print(myVector[1])
             }
         }
         else {
-            if m.selectedScore != 0{
-                m.selectedScore = 0
+            if myVector[1] != 0{
+                myVector[1] = 0
             }
             else{
-            print("Room Q3. Poor")
-            roomTotal += valueAnswers[2]
-                print(m.selectedScore)
+            print("Food Q3. Poor")
+                myVector[1] += valueAnswers[2]
+                print(myVector[1])
             }
         }
+            
+            foodTotal += myVector[1]
+            print(foodTotal)
+                
         case 3:
         if indexPath.item == 0{
-            if m.selectedScore != 0{
-                m.selectedScore = 0
+            if myVector[2] != 0{
+                myVector[2] = 0
             }
             else{
-            print("Room Q1. Excellent")
-            roomTotal += valueAnswers[0]
-                print(m.selectedScore)
+            print("Food Q4. Excellent")
+                myVector[2] += valueAnswers[0]
+                print(myVector[2])
             }
         }
         else if indexPath.item == 1{
-            if m.selectedScore != 0{
-                m.selectedScore = 0
+            if myVector[2] != 0{
+                myVector[2] = 0
             }
             else{
-            print("Room Q1. Medium")
-            roomTotal += valueAnswers[1]
-                print(m.selectedScore)
+            print("Food Q4. Medium")
+                myVector[2] += valueAnswers[1]
+                print(myVector[2])
             }
         }
         else {
-            if m.selectedScore != 0{
-                m.selectedScore = 0
+            if myVector[2] != 0{
+                myVector[2] = 0
             }
             else{
-            print("Room Q1. Poor")
-            roomTotal += valueAnswers[2]
-                print(m.selectedScore)
+            print("Food Q4. Poor")
+                myVector[2] += valueAnswers[2]
+                print(myVector[2])
             }
         }
+            
+            foodTotal += myVector[1]
+            print(foodTotal)
+              
         case 4:
             if indexPath.item == 0{
-                if m.selectedScore != 0{
-                    m.selectedScore = 0
+                if  myVector[4] != 0{
+                    myVector[4] = 0
                 }
                 else{
-                print("Room Q1. Excellent")
-                roomTotal += valueAnswers[0]
-                    print(m.selectedScore)
+                print("Food Q5. Excellent")
+                    myVector[4] += valueAnswers[0]
+                    print(myVector[4])
                 }
             }
             else if indexPath.item == 1{
-                if m.selectedScore != 0{
-                    m.selectedScore = 0
+                if myVector[4] != 0{
+                    myVector[4] = 0
                 }
                 else{
-                print("Room Q1. Medium")
-                roomTotal += valueAnswers[1]
-                    print(m.selectedScore)
+                print("Food Q5. Medium")
+                    myVector[4] += valueAnswers[1]
+                    print(myVector[4])
                 }
             }
             
             else {
-                if m.selectedScore != 0{
-                    m.selectedScore = 0
+                if myVector[4] != 0{
+                    myVector[4] = 0
                 }
                 else{
-                print("Room Q1. Poor")
-                roomTotal += valueAnswers[2]
-                    print(m.selectedScore)
+                print("Food Q5. Poor")
+                    myVector[4] += valueAnswers[2]
+                    print(myVector[4])
                 }
             }
+            
+            foodTotal += myVector[1]
+            print(foodTotal)
+              
         default :
             print("")
         }
