@@ -13,7 +13,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var valueAnswers = [100,50,30]
     var room = 0
-    var roomTotal = 0
+    var foodTotal = 0
     var addQ = 0
     var id = 1
     var servType = "Room"
@@ -205,7 +205,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                     else{
                         myVector[0] = valueAnswers[0]
-                        print("Room Q1. Excellent")
+                        print("Food Q1. Excellent")
                         print(myVector[0])
                     }
                 }
@@ -216,7 +216,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                     else{
                         myVector[0] = valueAnswers[1]
-                    print("Room Q1. Medium")
+                    print("Food Q1. Medium")
                     print(myVector[0])
                     }
                 }
@@ -228,12 +228,12 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     else{
                         myVector[0] = 0
                         myVector[0] = valueAnswers[2]
-                    print("Room Q1. Poor")
+                    print("Food Q1. Poor")
                     print(myVector[0])
                     }
                 }
-        roomTotal += myVector[0]
-        print(roomTotal)
+            foodTotal += myVector[0]
+        print(foodTotal)
             
         case 1:
             if indexPath.item == 0{
@@ -242,7 +242,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
                 else{
                     myVector[1] = valueAnswers[0]
-                print("Room Q2. Excellent")
+                print("Food Q2. Excellent")
                     myVector[1] += valueAnswers[0]
                     print(myVector[1])
                 }
@@ -253,7 +253,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
                 else{
                     myVector[1] = valueAnswers[1]
-                print("Room Q2. Medium")
+                print("Food Q2. Medium")
                     myVector[1] += valueAnswers[1]
                     print(myVector[1])
                 }
@@ -263,14 +263,14 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     myVector[1] = 0
                 }
                 else{
-                print("Room Q2. Poor")
+                print("Food Q2. Poor")
                     myVector[1] = valueAnswers[2]
                     print(myVector[1])
                 }
             }
             
-            roomTotal += myVector[1]
-            print(roomTotal)
+            foodTotal += myVector[1]
+            print(foodTotal)
                 
         case 2:
         if indexPath.item == 0{
@@ -278,7 +278,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[1] = 0
             }
             else{
-            print("Room Q3. Excellent")
+            print("Food Q3. Excellent")
                 myVector[1] += valueAnswers[0]
                 print(myVector[1])
             }
@@ -288,7 +288,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[1] = 0
             }
             else{
-            print("Room Q3. Medium")
+            print("Food Q3. Medium")
                 myVector[1] += valueAnswers[1]
                 print(myVector[1])
             }
@@ -298,14 +298,14 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[1] = 0
             }
             else{
-            print("Room Q3. Poor")
+            print("Food Q3. Poor")
                 myVector[1] += valueAnswers[2]
                 print(myVector[1])
             }
         }
             
-            roomTotal += myVector[1]
-            print(roomTotal)
+            foodTotal += myVector[1]
+            print(foodTotal)
                 
         case 3:
         if indexPath.item == 0{
@@ -313,7 +313,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[2] = 0
             }
             else{
-            print("Room Q4. Excellent")
+            print("Food Q4. Excellent")
                 myVector[2] += valueAnswers[0]
                 print(myVector[2])
             }
@@ -323,7 +323,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[2] = 0
             }
             else{
-            print("Room Q4. Medium")
+            print("Food Q4. Medium")
                 myVector[2] += valueAnswers[1]
                 print(myVector[2])
             }
@@ -333,14 +333,14 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[2] = 0
             }
             else{
-            print("Room Q4. Poor")
+            print("Food Q4. Poor")
                 myVector[2] += valueAnswers[2]
                 print(myVector[2])
             }
         }
             
-            roomTotal += myVector[1]
-            print(roomTotal)
+            foodTotal += myVector[1]
+            print(foodTotal)
               
         case 4:
             if indexPath.item == 0{
@@ -348,7 +348,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     myVector[4] = 0
                 }
                 else{
-                print("Room Q5. Excellent")
+                print("Food Q5. Excellent")
                     myVector[4] += valueAnswers[0]
                     print(myVector[4])
                 }
@@ -358,7 +358,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     myVector[4] = 0
                 }
                 else{
-                print("Room Q5. Medium")
+                print("Food Q5. Medium")
                     myVector[4] += valueAnswers[1]
                     print(myVector[4])
                 }
@@ -369,14 +369,14 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     myVector[4] = 0
                 }
                 else{
-                print("Room Q5. Poor")
+                print("Food Q5. Poor")
                     myVector[4] += valueAnswers[2]
                     print(myVector[4])
                 }
             }
             
-            roomTotal += myVector[1]
-            print(roomTotal)
+            foodTotal += myVector[1]
+            print(foodTotal)
               
         default :
             print("")
