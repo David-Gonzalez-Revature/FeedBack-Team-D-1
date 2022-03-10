@@ -13,7 +13,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var valueAnswers = [100,50,30]
     var room = 0
-    var foodTotal = 0
+    var roomTotal = 0
     var addQ = 0
     var id = 1
     var servType = "Room"
@@ -232,8 +232,8 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     print(myVector[0])
                     }
                 }
-            foodTotal += myVector[0]
-        print(foodTotal)
+            roomTotal += myVector[0]
+        print(roomTotal)
             
         case 1:
             if indexPath.item == 0{
@@ -241,7 +241,6 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     myVector[1] = 0
                 }
                 else{
-                    myVector[1] = valueAnswers[0]
                 print("Food Q2. Excellent")
                     myVector[1] += valueAnswers[0]
                     print(myVector[1])
@@ -252,7 +251,6 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     myVector[1] = 0
                 }
                 else{
-                    myVector[1] = valueAnswers[1]
                 print("Food Q2. Medium")
                     myVector[1] += valueAnswers[1]
                     print(myVector[1])
@@ -269,51 +267,16 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
             
-            foodTotal += myVector[1]
-            print(foodTotal)
+            roomTotal += myVector[1]
+            print(roomTotal)
                 
         case 2:
-        if indexPath.item == 0{
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Food Q3. Excellent")
-                myVector[1] += valueAnswers[0]
-                print(myVector[1])
-            }
-        }
-        else if indexPath.item == 1{
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Food Q3. Medium")
-                myVector[1] += valueAnswers[1]
-                print(myVector[1])
-            }
-        }
-        else {
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Food Q3. Poor")
-                myVector[1] += valueAnswers[2]
-                print(myVector[1])
-            }
-        }
-            
-            foodTotal += myVector[1]
-            print(foodTotal)
-                
-        case 3:
         if indexPath.item == 0{
             if myVector[2] != 0{
                 myVector[2] = 0
             }
             else{
-            print("Food Q4. Excellent")
+            print("Food Q3. Excellent")
                 myVector[2] += valueAnswers[0]
                 print(myVector[2])
             }
@@ -323,7 +286,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[2] = 0
             }
             else{
-            print("Food Q4. Medium")
+            print("Food Q3. Medium")
                 myVector[2] += valueAnswers[1]
                 print(myVector[2])
             }
@@ -333,14 +296,49 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 myVector[2] = 0
             }
             else{
-            print("Food Q4. Poor")
+            print("Food Q3. Poor")
                 myVector[2] += valueAnswers[2]
                 print(myVector[2])
             }
         }
             
-            foodTotal += myVector[1]
-            print(foodTotal)
+            roomTotal += myVector[2]
+            print(roomTotal)
+                
+        case 3:
+        if indexPath.item == 0{
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Food Q4. Excellent")
+                myVector[3] += valueAnswers[0]
+                print(myVector[3])
+            }
+        }
+        else if indexPath.item == 1{
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Food Q4. Medium")
+                myVector[3] += valueAnswers[1]
+                print(myVector[3])
+            }
+        }
+        else {
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Food Q4. Poor")
+                myVector[3] += valueAnswers[2]
+                print(myVector[3])
+            }
+        }
+            
+            roomTotal += myVector[3]
+            print(roomTotal)
               
         case 4:
             if indexPath.item == 0{
@@ -375,8 +373,8 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
             
-            foodTotal += myVector[1]
-            print(foodTotal)
+            roomTotal += myVector[1]
+            print( roomTotal)
               
         default :
             print("")
@@ -390,7 +388,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     @IBAction func saveRoomButton(_ sender: Any) {
-        CoreDataManage.inst.addDataRoomSurvey(id: Int32(id), tR: Int32(roomTotal), tF: Int32(m.selectedScore), tS: Int32(roomTotal), typeSer: servType)
+        CoreDataManage.inst.addDataRoomSurvey(id: Int32(id),  tR: Int32(roomTotal), typeSer: servType)
         //addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
         print("data saved")
         
@@ -399,17 +397,16 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func viewRoomButton(_ sender: Any) {
         
-        let data = CoreDataManage.inst.getData()
+        let data = CoreDataManage.inst.getDataRoom(tR: <#T##Int32#>)
         for d in data{
-            print("id is ", d.id , "Score for ", d.typeService,
-                  "Question Score is " , d.totalFood, " Total Room Score is: ", d.totalScore, m.selectedScore)
+            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalRoom )
         }
     }
     
-    @IBAction func updateRoomButton(_ sender: Any) {
-        var d = CoreDataManage.inst.updateData(id: Int32(id), tR: Int32(roomTotal), tF: Int32(m.selectedScore), tS: Int32(roomTotal), typeSer: servType)
-       
-    }
+//    @IBAction func updateRoomButton(_ sender: Any) {
+//        var d = CoreDataManage.inst.updateData(id: Int32(id), tR: Int32(roomTotal), tF: Int32(m.selectedScore), tS: Int32(roomTotal), typeSer: servType)
+//
+//    }
     
     
     

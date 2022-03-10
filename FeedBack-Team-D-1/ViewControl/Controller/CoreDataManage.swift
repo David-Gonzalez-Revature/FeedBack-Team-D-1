@@ -175,12 +175,48 @@ class CoreDataManage{
     }
    
     // MARK: - MANAGE USER-SCORE DATA
-    func addDataRoomSurvey(id: Int32, tR: Int32,tF: Int32, tS: Int32, typeSer : String){
+    func addDataRoomSurvey(id: Int32, tR: Int32, typeSer : String){
         let surv = NSEntityDescription.insertNewObject(forEntityName: "UserSurveyServices", into: context!) as! UserSurveyServices
         
         surv.id = id
         surv.totalRoom = tR
-        surv.totalFood = tF  //for now this is for room score only
+        surv.typeService = typeSer
+        
+        do {
+            try context?.save()
+            print(" saved data")
+        }
+        catch{
+            print("Room Survey data not saved")
+        }
+
+        print( " Data saved in DATA-USER-SURVEY Entity")
+
+    }
+    
+    func addDataGymSurvey(id: Int32, tG: Int32, typeSer : String){
+        let surv = NSEntityDescription.insertNewObject(forEntityName: "UserSurveyServices", into: context!) as! UserSurveyServices
+        
+        surv.id = id
+        surv.totalGym = tG
+        surv.typeService = typeSer
+        
+        do {
+            try context?.save()
+            print(" saved data")
+        }
+        catch{
+            print("Room Survey data not saved")
+        }
+
+        print( " Data saved in DATA-USER-SURVEY Entity")
+
+    }
+    func addDataFoodSurvey(id: Int32, tF: Int32, typeSer : String){
+        let surv = NSEntityDescription.insertNewObject(forEntityName: "UserSurveyServices", into: context!) as! UserSurveyServices
+        
+        surv.id = id
+        surv.totalFood = tF
         surv.typeService = typeSer
         
         do {
@@ -206,6 +242,26 @@ class CoreDataManage{
         }
         catch {
             print("cannot fetch any data")
+        }
+        return surv
+    }
+    func getDataRoom (tR:Int32) ->[UserSurveyServices]{ //returning data in form of array
+
+        var surv = [UserSurveyServices]()
+        var fReq = NSFetchRequest<NSFetchRequestResult> (entityName: "UserSurveyServices")
+
+        fReq.predicate = NSPredicate(format: "Room Score", tR)
+        fReq.fetchLimit = 1
+        
+        do{
+            let req = try context?.fetch(fReq) as! [UserSurveyServices]
+            if (req.count != 0){
+                }
+            else{
+                print("data not found")
+            }
+        }
+        catch {
         }
         return surv
     }
