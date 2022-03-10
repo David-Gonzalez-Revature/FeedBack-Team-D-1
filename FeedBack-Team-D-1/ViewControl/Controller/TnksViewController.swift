@@ -31,7 +31,7 @@ class TnksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailG = "david@gmail.com"
+        emailG = userEmail_Home
         print("Email     Score", emailG)
         // Do any additional setup after loading the view.
     }
@@ -121,6 +121,26 @@ class TnksViewController: UIViewController {
         //getOneDataUserScore()
         getDataUserScore()
     }
+    
+    @IBAction func homeT(_ sender: Any) {
+        
+//        surveyChecked = true
+//        thanksChecked = false
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "loginView") as? StartViewController else {
+            print("Couldn't find view controller")
+            return
+        }
+        
+        present(destinationViewController, animated: true, completion: nil)
+//        print(surveyChecked)
+//        print(thanksChecked)
+        
+    }
+    
+    
+    
+    
     // ************
     // Active Micro
     // ************
@@ -267,7 +287,7 @@ class TnksViewController: UIViewController {
                 var numRating = CoreDataManage.inst.getDataUserScore().count
                 bad += 1
             }
-            print("Email is ",d.email,"Score ", d.score, "DateCreated USER SCORE ",d.dateCreated)
+//            print("Email is ",d.email,"Score ", d.score, "DateCreated USER SCORE ",d.dateCreated)
         }
         print(numRatingTotal, "Total Bad:",bad," Total Good: ",good)
         
@@ -277,16 +297,17 @@ class TnksViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(homeChecked)
-        print(giftChecked)
-        if(homeChecked == true && giftChecked == false){
+        
+        
+        print("homeChecked",homeChecked,"userEmail_Home",userEmail_Home)
+        print("giftChecked",giftChecked)
+        if(homeChecked == false && giftChecked == true){
+            
+            
+            
             let svc = segue.destination as!  GiftsViewController
             svc.userEmail_Home = userEmail_Home
-        }/*else{
-            print("Go to the Login")
-            // let svc = segue.destination as!  StartViewController
-         //   svc.userEmail_Home = userEmail_Home
-        }*/
+        }
         
     }
    

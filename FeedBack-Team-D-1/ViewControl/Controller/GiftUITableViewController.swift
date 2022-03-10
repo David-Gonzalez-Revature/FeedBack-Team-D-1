@@ -17,7 +17,7 @@ class GiftUITableViewController: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("GiftUITableViewController      aca:   awakeFromNib")
+       // print("GiftUITableViewController      aca:   awakeFromNib")
         // Initialization code
     }
 

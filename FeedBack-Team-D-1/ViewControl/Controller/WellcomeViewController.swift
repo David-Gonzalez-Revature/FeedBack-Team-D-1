@@ -95,12 +95,13 @@ class WellcomeViewController: UIViewController {
    // }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(thanksChecked)
-        print(surveyChecked)
-        if(thanksChecked == true && surveyChecked == false){
-            let svc = segue.destination as!  TnksViewController
-             svc.userEmail_Home = userEmail_Home
-        }
+//        print(thanksChecked)
+//        print(surveyChecked)
+//        if(thanksChecked == true && surveyChecked == false){
+//
+       // }
+        let svc = segue.destination as!  TnksViewController
+         svc.userEmail_Home = userEmail_Home
         
     }
    

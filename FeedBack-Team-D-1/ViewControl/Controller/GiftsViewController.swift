@@ -47,7 +47,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gifts.count
     }
-    // MARK: - RANKING VALUES
+    // MARK: - CORE DATA RANKING VALUES
     func getDataUserScore() {
         let data = CoreDataManage.inst.getDataUserScore() //.getData()
         var good = 0
@@ -94,6 +94,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func itemSelected(_ sender: Any) {
         endMesagge.isHidden = false
         selectButton.isEnabled = false
+        selectButton.setTitle("SELECTED", for: .normal)
     }
     
 }
