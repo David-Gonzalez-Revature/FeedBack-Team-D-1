@@ -18,6 +18,7 @@
 		22A8971727D1A062009AC391 /* happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A8971527D1A061009AC391 /* happy.mp3 */; };
 		22A8971827D1A062009AC391 /* sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22A8971627D1A061009AC391 /* sad.mp3 */; };
 		22AC054027CE59220019A959 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */; };
+		22BA05C427DA0F2E00DE252F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA05C327DA0F2E00DE252F /* MapViewController.swift */; };
 		22CEC9B927D41A96002AB800 /* GiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEC9B827D41A96002AB800 /* GiftsViewController.swift */; };
 		22CEC9BB27D42060002AB800 /* GiftUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEC9BA27D42060002AB800 /* GiftUITableViewController.swift */; };
 		22CEC9BD27D44B5C002AB800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CEC9BC27D44B5C002AB800 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		22A8971527D1A061009AC391 /* happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happy.mp3; sourceTree = "<group>"; };
 		22A8971627D1A061009AC391 /* sad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sad.mp3; sourceTree = "<group>"; };
 		22AC053F27CE59220019A959 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		22BA05C327DA0F2E00DE252F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		22CEC9B827D41A96002AB800 /* GiftsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsViewController.swift; sourceTree = "<group>"; };
 		22CEC9BA27D42060002AB800 /* GiftUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftUITableViewController.swift; sourceTree = "<group>"; };
 		22CEC9BC27D44B5C002AB800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				90BBC14727D782FC00E8CE93 /* FoodViewController.swift */,
 				22D0F2C827CCF6F500E2C985 /* TnksViewController.swift */,
 				2285CC5127CE8BB00068D55C /* CoreDataManage.swift */,
+				22BA05C327DA0F2E00DE252F /* MapViewController.swift */,
 				2DD6EEA127D965B5009DCD28 /* SurveyTabViewController.swift */,
 			);
 			path = Controller;
@@ -305,6 +308,7 @@
 				90BBC14827D782FC00E8CE93 /* FoodViewController.swift in Sources */,
 				2DEAAEE027D5CECE0015E9EA /* SplashscreenAnimationViewController.swift in Sources */,
 				22DCFD9E27C93C160013605E /* SignUp.swift in Sources */,
+				22BA05C427DA0F2E00DE252F /* MapViewController.swift in Sources */,
 				22DCFD9A27C93C160013605E /* AppDelegate.swift in Sources */,
 				226327DA27D398910078BF5B /* UserScoreGifts+CoreDataClass.swift in Sources */,
 				2D2D0C8327D731A600536EB0 /* Authorization+CoreDataClass.swift in Sources */,
@@ -469,7 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L2REF7KEJN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -498,7 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L2REF7KEJN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FeedBack-Team-D-1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
