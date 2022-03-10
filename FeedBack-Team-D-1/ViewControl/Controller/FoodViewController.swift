@@ -13,8 +13,8 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     var room = 0
     var foodTotal = 0
     var addQ = 0
-    var id = 2
-    var servType = "Gym"
+    var id = 3
+    var servType = "Food"
     var myVector = [0,0,0,0,0]
 
     var foodQ = ["how was food", "food tasty","question 3", "question 4", "question 5"]
@@ -208,7 +208,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     myVector[1] = 0
                 }
                 else{
-                    myVector[1] = valueAnswers[0]
                 print("Gym Q2. Excellent")
                     myVector[1] += valueAnswers[0]
                     print(myVector[1])
@@ -219,7 +218,6 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                     myVector[1] = 0
                 }
                 else{
-                    myVector[1] = valueAnswers[1]
                 print("Gym Q2. Medium")
                     myVector[1] += valueAnswers[1]
                     print(myVector[1])
@@ -241,46 +239,11 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
         case 2:
         if indexPath.item == 0{
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Gym Q3. Excellent")
-                myVector[1] += valueAnswers[0]
-                print(myVector[1])
-            }
-        }
-        else if indexPath.item == 1{
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Gym Q3. Medium")
-                myVector[1] += valueAnswers[1]
-                print(myVector[1])
-            }
-        }
-        else {
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Gym Q3. Poor")
-                myVector[1] += valueAnswers[2]
-                print(myVector[1])
-            }
-        }
-            
-            foodTotal += myVector[1]
-            print(foodTotal)
-                
-        case 3:
-        if indexPath.item == 0{
             if myVector[2] != 0{
                 myVector[2] = 0
             }
             else{
-            print("Gym Q4. Excellent")
+            print("Gym Q3. Excellent")
                 myVector[2] += valueAnswers[0]
                 print(myVector[2])
             }
@@ -290,7 +253,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 myVector[2] = 0
             }
             else{
-            print("Gym Q4. Medium")
+            print("Gym Q3. Medium")
                 myVector[2] += valueAnswers[1]
                 print(myVector[2])
             }
@@ -300,13 +263,48 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
                 myVector[2] = 0
             }
             else{
-            print("Gym Q4. Poor")
+            print("Gym Q3. Poor")
                 myVector[2] += valueAnswers[2]
                 print(myVector[2])
             }
         }
             
-            foodTotal += myVector[1]
+            foodTotal += myVector[2]
+            print(foodTotal)
+                
+        case 3:
+        if indexPath.item == 0{
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Gym Q4. Excellent")
+                myVector[3] += valueAnswers[0]
+                print(myVector[3])
+            }
+        }
+        else if indexPath.item == 1{
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Gym Q4. Medium")
+                myVector[3] += valueAnswers[1]
+                print(myVector[3])
+            }
+        }
+        else {
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Gym Q4. Poor")
+                myVector[3] += valueAnswers[2]
+                print(myVector[3])
+            }
+        }
+            
+            foodTotal += myVector[3]
             print(foodTotal)
               
         case 4:
@@ -350,7 +348,19 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
-
+    
+    @IBAction func saveFoodButton(_ sender: Any) {
+        CoreDataManage.inst.addDataFoodSurvey(id: Int32(id),  tF: Int32(foodTotal), typeSer: servType)
+        print("data saved")
+    }
+    
+    @IBAction func viewFoodButton(_ sender: Any) {
+        let data = CoreDataManage.inst.getData()
+        for d in data{
+            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalFood )
+        }
+    }
+    
         // end of view controller
     
 }

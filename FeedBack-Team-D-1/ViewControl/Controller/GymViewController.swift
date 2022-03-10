@@ -216,7 +216,6 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                     myVector[1] = 0
                 }
                 else{
-                    myVector[1] = valueAnswers[0]
                 print("Gym Q2. Excellent")
                     myVector[1] += valueAnswers[0]
                     print(myVector[1])
@@ -227,7 +226,6 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                     myVector[1] = 0
                 }
                 else{
-                    myVector[1] = valueAnswers[1]
                 print("Gym Q2. Medium")
                     myVector[1] += valueAnswers[1]
                     print(myVector[1])
@@ -249,46 +247,11 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 
         case 2:
         if indexPath.item == 0{
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Gym Q3. Excellent")
-                myVector[1] += valueAnswers[0]
-                print(myVector[1])
-            }
-        }
-        else if indexPath.item == 1{
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Gym Q3. Medium")
-                myVector[1] += valueAnswers[1]
-                print(myVector[1])
-            }
-        }
-        else {
-            if myVector[1] != 0{
-                myVector[1] = 0
-            }
-            else{
-            print("Gym Q3. Poor")
-                myVector[1] += valueAnswers[2]
-                print(myVector[1])
-            }
-        }
-            
-            gymTotal += myVector[1]
-            print(gymTotal)
-                
-        case 3:
-        if indexPath.item == 0{
             if myVector[2] != 0{
                 myVector[2] = 0
             }
             else{
-            print("Gym Q4. Excellent")
+            print("Gym Q3. Excellent")
                 myVector[2] += valueAnswers[0]
                 print(myVector[2])
             }
@@ -298,7 +261,7 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 myVector[2] = 0
             }
             else{
-            print("Gym Q4. Medium")
+            print("Gym Q3. Medium")
                 myVector[2] += valueAnswers[1]
                 print(myVector[2])
             }
@@ -308,13 +271,48 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 myVector[2] = 0
             }
             else{
-            print("Gym Q4. Poor")
+            print("Gym Q3. Poor")
                 myVector[2] += valueAnswers[2]
                 print(myVector[2])
             }
         }
             
-            gymTotal += myVector[1]
+            gymTotal += myVector[2]
+            print(gymTotal)
+                
+        case 3:
+        if indexPath.item == 0{
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Gym Q4. Excellent")
+                myVector[3] += valueAnswers[0]
+                print(myVector[3])
+            }
+        }
+        else if indexPath.item == 1{
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Gym Q4. Medium")
+                myVector[3] += valueAnswers[1]
+                print(myVector[3])
+            }
+        }
+        else {
+            if myVector[3] != 0{
+                myVector[3] = 0
+            }
+            else{
+            print("Gym Q4. Poor")
+                myVector[3] += valueAnswers[2]
+                print(myVector[3])
+            }
+        }
+            
+            gymTotal += myVector[3]
             print(gymTotal)
               
         case 4:
@@ -350,7 +348,7 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 }
             }
             
-            gymTotal += myVector[1]
+            gymTotal += myVector[4]
             print(gymTotal)
               
         default :
@@ -359,7 +357,19 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
     }
 
+    @IBAction func saveGymButton(_ sender: Any) {
+        CoreDataManage.inst.addDataGymSurvey(id: Int32(id),  tG: Int32(gymTotal), typeSer: servType)
+        //addDataRoomSurvey(id: id, totalRoom: addQ, totalScore: roomTotal)
+        print("data saved")
+        
+    }
     
-
+    @IBAction func viewGymButton(_ sender: Any) {
+        let data = CoreDataManage.inst.getData()
+        for d in data{
+            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalGym )
+        }
+    }
+    
 
 }
