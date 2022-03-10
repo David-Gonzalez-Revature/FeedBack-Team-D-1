@@ -371,5 +371,4 @@ class GymViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     
-
 }

@@ -245,6 +245,8 @@ class CoreDataManage{
         }
         return surv
     }
+    
+    
     func getDataRoom (tR:Int32) ->[UserSurveyServices]{ //returning data in form of array
 
         var surv = [UserSurveyServices]()

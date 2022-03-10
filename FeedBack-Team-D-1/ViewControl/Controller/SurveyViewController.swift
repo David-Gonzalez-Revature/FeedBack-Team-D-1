@@ -207,6 +207,7 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         myVector[0] = valueAnswers[0]
                         print("Food Q1. Excellent")
                         print(myVector[0])
+                        
                     }
                 }
                 else if indexPath.item == 1{
@@ -397,10 +398,10 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func viewRoomButton(_ sender: Any) {
         
-//        let data = CoreDataManage.inst.getDataRoom(tR: <#T##Int32#>)
-//        for d in data{
-//            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalRoom )
-//        }
+        let data = CoreDataManage.inst.getData()
+        for d in data{
+            print("id is ", d.id , "Score for ", d.typeService, " Total Room Score is: ", d.totalRoom )
+        }
     }
     
 //    @IBAction func updateRoomButton(_ sender: Any) {
