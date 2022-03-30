@@ -38,13 +38,15 @@ https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1.git
 
 start the app and enjoy it
 
-![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/Screen%20Shot%202022-03-30%20at%2010.55.01%20AM.png)
+![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/docs/Screen%20Shot%202022-03-30%20at%2010.55.01%20AM.png)
 
-![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/Screen%20Shot%202022-03-30%20at%2010.55.09%20AM.png)
+![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/docs/Screen%20Shot%202022-03-30%20at%2010.55.09%20AM.png)
 
-![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/Screen%20Shot%202022-03-30%20at%2010.55.18%20AM.png)
+![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/docs/Screen%20Shot%202022-03-30%20at%2010.56.24%20AM.png)
 
-![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/Screen%20Shot%202022-03-30%20at%2010.55.55%20AM.png)
+![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/docs/Screen%20Shot%202022-03-30%20at%2010.55.55%20AM.png)
+
+![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/docs/Screen%20Shot%202022-03-30%20at%2010.56.09%20AM.png)
 
 
 
