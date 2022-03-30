@@ -1,6 +1,6 @@
 
 # PROJECT NAME
-# FeedBack-Team-D-1
+# City Escape Resort FeedBack 
 ## Project Description
 
 In the project, we are working on the feedBack from The City Escape Resort
