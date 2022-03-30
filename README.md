@@ -38,8 +38,7 @@ https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1.git
 
 start the app and enjoy it
 
-
-
+![app icon](https://github.com/David-Gonzalez-Revature/FeedBack-Team-D-1/blob/main/Screen%20Shot%202022-03-30%20at%2010.55.01%20AM.png)
 ## Contributors
 
 > Stephanie Marin, David Gonzalez, John Figueroa
