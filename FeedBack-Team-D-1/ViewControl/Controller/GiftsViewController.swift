@@ -18,7 +18,7 @@ class GiftsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var selectButton: UIButton!
     
     // MARK: - VARS
-    var gifts    = ["Hotel", "Food", "Amazone","Gas"]
+    var gifts    = ["hotel", "food", "amazone","gas"]
     var userEmail_Home = ""
     var mailConected = ""
     

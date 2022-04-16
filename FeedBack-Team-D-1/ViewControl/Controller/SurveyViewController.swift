@@ -35,9 +35,9 @@ class SurveyViewController: UIViewController, UITableViewDelegate, UITableViewDa
    
     }
     
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        <#code#>
-    }
+//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        <#code#>
+//    }
     
     
     //MARK: - Survey TableView
